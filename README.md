@@ -1,5 +1,5 @@
 # Toquen el DOM. Music School for Kids.
-(https://raw.githubusercontent.com/nkaryoli/Toquen-el-Dom.-Music-School/src/imgs/AppScreenShot.png)
+![page-screen-shot](https://raw.githubusercontent.com/nkaryoli/Toquen-el-Dom.-Music-School/src/imgs/AppScreenShot.png)
 
 Toquen el DOM is an interactive web application designed for an online music school. It allows users to practice musical instruments virtually, playing sounds through mouse clicks or keyboard presses. The platform provides an engaging and educational experience, making music learning more accessible and interactive.
 
