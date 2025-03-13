@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Khand:wght@500;600;700;900&family=Merriweather:ital@1&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="body-home">
+    <header>
+            <div class="logo">
+                <img src="/src/imgs/SM_Logo_sin_fondo.png" alt="">
+            </div>
+            <button id="open" class="openBtn"><p class="menuIcon">≡</p></button>
+            <nav id="nav">
+                <button id="close"  class="closeBtn"><p class="closeIcon">x</p></button>
+                <ul class="navBar">
+                    <li class="navLink"><a href="./index.html"> Home</a></li>
+                    <li  class="navLink"><a href="./src/pages/instrumentos.html"> Instruments </a></li>
+                    <li class="navLink"><a href="./src/pages/aboutUs.html"> About us</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <section class="hero-section">
+        <h1>Unlock your musical creativity and <br>have fun while doing it.!!</h1>
+        <br>
+        <br>
+        <p class="for-everyone-text">FOR EVERYONE</p>
+        <p class="more-information-text">MORE INFORMATION</p>
+    </section>
+
+    <main>
+
+        <section class="musicians-section">
+            <article class="musician-card">
+                <img src="./src/imgs/killa.png" alt="">
+                <h3 class="nameMusician">Ana María </h3>
+                <p>Artístic Coordinator</p>
+                <p>ESP / ENG / JPN</p> 
+            </article>
+
+            <article class="musician-card">
+                <img src="./src/imgs/Mava.png" alt="Foto de Mava">
+                <h3 class="nameMusician">MAVA</h3>
+                <p>Piano & Event Planner</p>
+                <p>ESP | ENG </p>
+            </article>
+
+            <article class="musician-card">
+                <img src="./src/imgs/Karyoli.png" alt=""> 
+                <h3 class="nameMusician"> KARYOLI </h3>
+                <p>Bass & Improvisation</p>
+                <p>ESP / ENG / ITA</p> 
+            </article>
+        </section>
+
+                <!-- slider mobile init-->
+                <iframe id="carousel-display" src="./src/pages/carousel.html" width="100%" height="600" frameborder="0"></iframe>
+
+                <!-- slider mobile end-->
+
+
+        <h2 class="musictitle">Music Academy</h2>
+        <h4 class="try-your-self">Try out our virtual instruments</h4>
+        <section class="display-instruments">
+            <article class="instrument-card">
+                <h3>Virtual Piano</h3>
+                <img class="card-instrument-image" src="./src/imgs/img_piano.png" alt="Imágen de Piano"> 
+                <a href="./src/pages/piano.html"><button>Play</button></a>
+            </article>
+            <article class="instrument-card">
+                <h3>Virtual Bass</h3>
+                <img class="card-instrument-image" src="./src/imgs/img_bass.png"  alt="Imagen de Bajo">
+                <a href="./src/pages/bajo.html"><button>Play</button></a>
+            </article>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="info_footer"> 
+        <p> 
+            Monday to Friday 10h00 a 20h00 
+        </p> 
+        <p> <img src="/src/imgs/SM_email_.png" alt="imágen sobre para carta">info@onlineMusic.com</p>
+        <p> <img src="/src/imgs/SM_Whatsapp_icon.png" alt="logo de whatsapp">+34 628111222</p>        </div>
+            <ul class="icon_rrss">
+                <li><a href=""><img src="/src/imgs/SM_Fb_icon.png" alt="logo de facebook"></a></li>
+                <li><a href=""><img src="/src/imgs/SM_Instagram_icon.png" alt="logo de instagram"></a></li>
+                <li><a href=""><img src="/src/imgs/SM_X_icon.png" alt="logo de X - twitter"></a></li>
+                <li><a href=""><img src="/src/imgs/SM_youtube_icon.png" alt="logo de youtube"></a></li>
+            </ul>
+    </footer>
+    <script src="./src/javascript/navBar.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

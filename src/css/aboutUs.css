@@ -1,0 +1,132 @@
+.main, .musicianContainer{
+    padding: 1rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main{
+    padding-top: 200px;
+
+}
+
+.notas{
+    width: 17rem;
+    width: 17rem;
+}
+
+.titleAbout{
+    font-family: var(--font-family-primary);
+    font-size: var(--h1-size);
+    color: var(--primary-color);
+    text-align: center;
+    margin: 50px;
+}
+
+.textAbout{
+    width: 54rem;
+    font-family: var(--font-family-tertiary);
+    font-size: var(--h1-size);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.textAbout{
+    width: 54rem;
+    font-family: var(--font-family-tertiary);
+    font-size: var(--paragraf-size);
+    color: white;
+    padding: 1rem 0;
+    padding: 1rem 0;
+}
+
+.musicianCard img{
+    width: 10rem;
+    border-radius: 100px;
+    margin-right: 50px;
+}
+
+.musicianCard{
+    width: 54rem;
+    margin-bottom: 5rem;
+    padding: 3rem;
+    background-image: linear-gradient(var(--primary-color), var(--accent-color),var(--secondary-color));
+    border-radius: 3rem;
+    display: flex;
+    align-items: start;
+}
+
+.musicianName{
+    font-family: var(--font-family-primary);
+    font-size: var(--h3-size);
+    color: black;
+}
+
+.textBio{
+    font-family: var(--font-family-tertiary);
+    font-size: var(--paragraf-size)
+}
+
+@media (width<700px){
+    .main, .musicianContainer{
+        padding: 1.5rem;
+    }
+
+    .notas{
+        width: 10rem;
+    }
+
+    .titleAbout{
+        font-size: var(--h3-size);
+    }
+
+    .textAbout, .textBio{
+        width: 100%;
+    }
+
+    .musicianCard img{
+        width: 5rem;
+        height: 5rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .musicianCard{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 2rem;
+    }
+
+    .musicianName{
+        font-size: 1.5rem;
+    }
+}
+
+@media (700px < width < 1100px){
+    .main, .musicianContainer{
+        padding: 1rem 3rem 3rem;
+    }
+
+    .main, .musicianContainer{
+    width: 100%;
+    }
+
+    .musicianCard, .textAbout{
+        width: 100%;
+    }
+
+    .notas{
+        width: 30%;
+    }
+    .musicianName{
+        font-size: 1.5rem;
+    }
+
+    .musicianCard img{
+        width: 6rem;
+        height: 6rem;
+    }
+}

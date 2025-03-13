@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;1,700;1,900&family=Josefin+Sans:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&family=Khand:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mooli&family=Titillium+Web:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+            <div class="logo">
+                <img src="/src/imgs/SM_Logo_sin_fondo.png" alt="">
+            </div>
+            <button id="open" class="openBtn">
+                <p class="menuIcon">≡</p>
+            </button>
+            <nav id="nav">
+                <button id="close" class="closeBtn">
+                    <p class="closeIcon">x</p>
+                </button>
+                <ul class="navBar">
+                    <li class="navLink"><a href="/index.html"> Home</a></li>
+                    <li class="navLink"><a href="./instrumentos.html"> Instruments </a></li>
+                    <li class="navLink"><a href="./aboutUs.html"> About us</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main class="mainpiano">
+
+        <h2>Virtual Piano</h2>
+
+        <div class="rotate_screen">Turn your screen to play</div>
+
+        <ul class="set">
+            <li onclick=" jsNota(261.625)" class="white e">DO</li>
+            <li onclick=" jsNota(311.127)" class="black ds"></li>
+            <li onclick=" jsNota(293.665)" class="white d">RE</li>
+            <li onclick=" jsNota(277.183)" class="black cs"></li>
+            <li onclick=" jsNota(261.626)" class="white c">MI</li>
+            <li onclick=" jsNota(246.942)" class="white b">FA</li>
+            <li onclick=" jsNota(233.082)" class="black as"></li>
+            <li onclick=" jsNota(220.000)" class="white a">SOL</li>
+            <li onclick=" jsNota(207.652)" class="black gs"></li>
+            <li onclick=" jsNota(195.995)" class="white g">LA</li>
+            <li onclick=" jsNota(184.997)" class="black fs"></li>
+            <li onclick=" jsNota(174.614)" class="white f">SI</li>
+            <li onclick=" jsNota(329.628)" class="white e">DO</li>
+            <li onclick=" jsNota(311.127)" class="black ds"></li>
+            <li onclick=" jsNota(293.665)" class="white d">RE</li>
+            <li onclick=" jsNota(277.183)" class="black cs"></li>
+            <li onclick=" jsNota(261.626)" class="white c">MI</li>
+            <li onclick=" jsNota(246.942)" class="white b">FA</li>
+            <li onclick=" jsNota(233.082)" class="black as"></li>
+            <li onclick=" jsNota(220.000)" class="white a">SOL</li>
+            <li onclick=" jsNota(207.652)" class="black gs"></li>
+            <li onclick=" jsNota(195.995)" class="white g">LA</li>
+            <li onclick=" jsNota(184.997)" class="black fs"></li>
+            <li onclick=" jsNota(174.614)" class="white f">SI</li>
+        </ul>
+
+
+
+        <!-- <ul class="set">
+            <li onclick=" jsNota(329.628)" class="white e">DO</li>
+            <li onclick=" jsNota(311.127)" class="black ds"></li>
+            <li onclick=" jsNota(293.665)" class="white d">RE</li>
+            <li onclick=" jsNota(277.183)" class="black cs"></li>
+            <li onclick=" jsNota(261.626)" class="white c">MI</li>
+            <li onclick=" jsNota(246.942)" class="white b">FA</li>
+            <li onclick=" jsNota(233.082)" class="black as"></li>
+            <li onclick=" jsNota(220.000)" class="white a">SOL</li>
+            <li onclick=" jsNota(207.652)" class="black gs"></li>
+            <li onclick=" jsNota(195.995)" class="white g">LA</li>
+            <li onclick=" jsNota(184.997)" class="black fs"></li>
+            <li onclick=" jsNota(174.614)" class="white f">SI</li>
+            <li onclick=" jsNota(329.628)" class="white e">DO</li>
+            <li onclick=" jsNota(311.127)" class="black ds"></li>
+            <li onclick=" jsNota(293.665)" class="white d">RE</li>
+            <li onclick=" jsNota(277.183)" class="black cs"></li>
+            <li onclick=" jsNota(261.626)" class="white c">MI</li>
+            <li onclick=" jsNota(246.942)" class="white b">FA</li>
+            <li onclick=" jsNota(233.082)" class="black as"></li>
+            <li onclick=" jsNota(220.000)" class="white a">SOL</li>
+            <li onclick=" jsNota(207.652)" class="black gs"></li>
+            <li onclick=" jsNota(195.995)" class="white g">LA</li>
+            <li onclick=" jsNota(184.997)" class="black fs"></li>
+            <li onclick=" jsNota(174.614)" class="white f">SI</li>
+
+        </ul> -->
+
+
+        <ul class="set-mobile">
+            <li onclick=" jsNota(174.614)" class="white b">FA</li>
+            <li onclick=" jsNota(184.997)" class="black as"></li>
+            <li onclick=" jsNota(195.998)" class="white a">SOL</li>
+            <li onclick=" jsNota(207.652)" class="black gs"></li>
+            <li onclick=" jsNota(220.000)" class="white g">LA</li>
+            <li onclick=" jsNota(233.082)" class="black fs"></li>
+            <li onclick=" jsNota(261.626)" class="white f">SI</li>
+            <li onclick=" jsNota(261.626)" class="white e">DO</li>
+            <li onclick=" jsNota(277.183)" class="black ds"></li>
+            <li onclick=" jsNota(293.665)" class="white d">RE</li>
+            <li onclick=" jsNota(311.127)" class="black cs"></li>
+            <li onclick=" jsNota(329.628)" class="white c">MI</li>
+        </ul>
+
+    </main>
+
+    <section class="tutorial-section">
+        <a href="./instrumentos.html">
+            <h5> Try another instrument </h5>
+        </a>
+        <div class="tutorial-div">
+            <img class="img-tutorial-piano" src="../imgs/tutorial.jpg" alt="Inforgrafía Piano">
+            <iframe class="video-tutorial" width="45%" height="320"
+                src="https://www.youtube.com/embed/hDN5Y2dOVjI?si=IdGokZleo0SEf7nn" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="info_footer">
+            <p>
+                Monday to Friday 10h00 a 20h00
+            </p>
+            <p> <img src="/src/imgs/SM_email_.png" alt="imágen sobre para carta">info@onlineMusic.com</p>
+            <p> <img src="/src/imgs/SM_Whatsapp_icon.png" alt="logo de whatsapp">+34 628111222</p>
+        </div>
+        <ul class="icon_rrss">
+            <li><a href=""><img src="/src/imgs/SM_Fb_icon.png" alt="logo de facebook"></a></li>
+            <li><a href=""><img src="/src/imgs/SM_Instagram_icon.png" alt="logo de instagram"></a></li>
+            <li><a href=""><img src="/src/imgs/SM_X_icon.png" alt="logo de X - twitter"></a></li>
+            <li><a href=""><img src="/src/imgs/SM_youtube_icon.png" alt="logo de youtube"></a></li>
+        </ul>
+    </footer>
+
+    <script src="../javascript/navBar.js"></script>
+
+    <script src="/src/javascript/piano.js"></script>
+</body>
+
+</html>
