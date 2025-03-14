@@ -125,86 +125,88 @@
     transform: rotateY(180deg);
 }
 
+.instruments-section {
+    width: 100%; 
+    display: flex;  
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    padding: 250px 0;
+    gap: 40px;
+}
 
+.instruments-section h2 {
+    color: var(--primary-color);
+    font-family: var(--font-family-primary); 
+    font-size: var(--h1-size);
+    margin: 0;
+}
 
+.instruments-section h4 {
+    color: var(--secondary-color);
+    font-family: var(--font-family-secondary); 
+    font-size: var(--h2-size);
+    margin: 0;
+}
 
-
-    .nameMusician{
-    color: white; 
-    }
-
-    .display-instruments {
-    width: 80%;
+.instruments-section div {
+    width: 100%;
     gap: 50px; 
     display: flex; 
     flex-direction: row; 
     align-items: center; 
-    padding: 150px 0; 
-    }
+    padding: 50px 0; 
+}
 
-    .display-instruments button{
-    border-radius: 10px; 
-    width: 200px; 
-    height: 40px; 
-    background-color: var(--primary-color); 
-    box-shadow: 0 4px 4px 0 rgba(255, 153, 51, 0.50); 
-
-    }
-
-    .instrument-card {
+.instruments-section div article {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
     justify-content: space-evenly; 
     width: 100%; 
-    height: 450px; 
+    height: auto; 
+    padding: 50px 0;
+    gap: 30px;
     background: linear-gradient(180deg, #121212, #3a76b7,#121212);
-    } 
+}
 
-    .card-instrument-image {
-        width: 350px;
-    }
-
-    main h2 {
-    color: var(--primary-color);
+.instruments-section div article h3 {
+    color: var(--text-color);
     font-family: var(--font-family-primary); 
-    font-size: var(--h1-size);
+    font-size: var(--h2-size);
     margin: 0;
-    }
-    
-    main h4 {
-    color: var(--secondary-color);
-    font-family: var(--font-family-secondary);
-    font-size: var(--h3-size);
-    padding: 0;
-    }
-    
-    .display-instruments h3, h2 {
-    color: var(--primary-color); 
-    font-family: var(--font-family-primary); 
-    font-size: var(--h2-size); 
-    } 
-    
-    .navLink { 
-    padding: 0 16px; 
-    } 
+}
 
-    .navBar {
-    list-style: none;
+.instruments-section div article a{
+    width: 200px; 
+    height: 40px; 
+    text-decoration: none;
+    color: var(--background-color);
+    font-family: var(--font-family-primary);
+    font-size: var(--h5-size);
     display: flex;
-    justify-content: space-between;
-    }
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; 
+    background-color: var(--primary-color); 
     
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instruments-section div article a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 153, 51, 0.8);
+}
+
+.instruments-section div article a:active {
+    transform: scale(0.95);
+    background-color: #885727;
+}
+
 #carousel-display {
     display: none;
 }
-    
-    
-    
-    
-    
-    
+
             /* pantalla mobile init */
 
             @media screen and (max-width: 430px) {
