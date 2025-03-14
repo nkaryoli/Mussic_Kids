@@ -11,17 +11,16 @@ canvas{
     height: 100vh;
     background:none;
     position: fixed;
-
 }
 
 .hero-section { 
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     padding-left: 150px;
-    background-image: url(../imgs/hero_box1.png);
+    background-image: url(../imgs/hero_img.png);
     background-size: contain;   
     background-position: right; 
     background-repeat: no-repeat;       
@@ -41,7 +40,7 @@ canvas{
     font-family: var(--font-family-primary);    
     color: var(--text-color);   
     font-size: var(--h2-size);
-    text-align: left;
+    text-align: center;
 }
 
 .hero-section a {    
@@ -49,7 +48,6 @@ canvas{
     color: var(--accent-color); 
     font-size: var(--subtitle-size);
     text-decoration: none;
-    
 }
 
 .musicians-section {    

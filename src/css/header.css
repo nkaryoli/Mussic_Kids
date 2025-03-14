@@ -3,44 +3,55 @@
     box-sizing: border-box;
     border: 1px solid red;
     margin: 0;
-} */
+}*/
 
-header{
+
+header div, header div img{
+    height: 100px;
+}
+
+/* Estilos generales */
+header {
     width: 100%;
-    height: 150px;
     display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
-    background: var(--background-color);
-    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    background: #121212;
     position: fixed;
     z-index: 1000;
 }
 
-.logo{
-    height: 100%;
+/* Menú oculto por defecto */
+nav {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    background: rgba(18, 18, 18, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.logo img{
-    height: 100%;
+.navBar {
+    list-style: none;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.navLink{
-	padding: 0 16px;
+.navBar li {
+    margin: 10px 0;
 }
 
-.navBar{
-	list-style: none;
-	display: flex;
-	justify-content: space-between;
-}
-
-header a {
-	text-decoration: none;
-    font-family: var(--font-family-primary);
-    font-size: var(--h2-size);
-    color: var(--text-color);
+.navBar a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--paragraf-size);
+    padding: 10px;
+    display: block;
 }
 
 header a:hover {
@@ -49,75 +60,61 @@ header a:hover {
     text-decoration-thickness: 4px;
 }
 
-.menuIcon, .closeIcon{
-    background-color: #121212;
-    font-size: 3rem;
+/* Icono de menú hamburguesa */
+.menu-icon {
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 101;
 }
 
-.openBtn, .closeBtn{
+/* Checkbox oculto */
+.menu-checkbox {
     display: none;
-    color: white;
-    padding: 0;
-    border: none;
 }
 
-nav{
-    display: flex;
-} 
+/* Si el checkbox está marcado, mostramos el menú */
+.menu-checkbox:checked + .menu-icon + nav {
+    opacity: 1;
+    visibility: visible;
+}
 
-@media (width<500px){
-    .logo img{
-        height: 5em;
-    }
+@media (min-width: 610px) {
     header{
-        padding: 10px;
-    }
-}
-
-@media (width<800px){
-
-    .openBtn, .closeBtn{
-        display: block;
-    }
-
-    nav{
-        opacity: 0;
-        visibility: hidden;
+        width: 100%;
+        height: 120px;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        gap: 1rem;
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(65, 65, 65, 0.5);
-        background-color: #121212;
+        padding: 10px 100px;
+        font-family: var(--font-family-primary);
+        z-index: 100;
+        position: relative;
     }
 
-    .closeIcon, header a{
-        font-size: 1.5rem;
+    .menu-icon {
+        display: none;
     }
 
-    .navBar{
-        flex-direction: column;
-    }
-
-    nav.visible{
+    nav {
+        width: auto;
         opacity: 1;
         visibility: visible;
+        position: relative;
+        background: none;
+        top: 0;
     }
 
-    .openBtn.hidden{
-        opacity: 0;
-        visibility: hidden;
+    .navBar a {
+        font-family: var(--font-family-primary);
+        font-size: var(--h4-size);
+
     }
 
+
+    .navBar {
+        flex-direction: row;
+        gap: 20px;
+    }
 }
-
-
-
-
-
-
