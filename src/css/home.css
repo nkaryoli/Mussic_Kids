@@ -140,7 +140,7 @@ canvas{
     flex-direction: column;    
     justify-content: center;
     align-items: center;
-    padding: 250px 0;
+    padding: 100px 0;
     gap: 40px;
 }
 
@@ -190,6 +190,7 @@ canvas{
 .instruments-section div article img {
     width: 60%;
 }
+
 .instruments-section div article a{
     width: 200px; 
     height: 40px; 
