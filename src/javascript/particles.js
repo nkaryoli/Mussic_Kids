@@ -5,28 +5,22 @@ window.requestAnimationFrame =
     window.msRequestAnimationFrame;
 
 onload = function () {
-    document.addEventListener("mousemove", startAnimation);
+    document.addEventListener("mousemove", startAnimation, { once: true});
 };
 
 let animationStarted = false;
 
-function startAnimation() {
+function startAnimation(event) {
     if (!animationStarted) {
         animationStarted = true;
-        init(); // Llama a la función que inicia la animación
+        init(event.clientX, event.clientY); // Llama a la función que inicia la animación
     }
 }
 
 // Escucha el primer movimiento del mouse para iniciar la animación
 document.addEventListener("mousemove", startAnimation);
 
-function initParticles() {
-    // Aquí va el código de tu animación
-    console.log("Animación iniciada"); 
-}
-
-
-function init() {
+function init(startX, startY) {
     canvas = document.querySelector("canvas");
     ctx = canvas.getContext("2d");
 
@@ -36,7 +30,7 @@ function init() {
     };
     onresize();
 
-    mouse = { x: canvas.width / 2, y: canvas.height / 2, out: false };
+    mouse = { x: startX, y: startY, out: false };
 
     canvas.onmouseout = function () {
         mouse.out = true;
