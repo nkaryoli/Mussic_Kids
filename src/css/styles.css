@@ -30,6 +30,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
+    position: relative;
 }
 
 canvas {
@@ -39,4 +40,5 @@ canvas {
     height: 100vh;
     background:none;
     position: fixed;
+
 }

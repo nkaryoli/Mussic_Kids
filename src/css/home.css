@@ -15,7 +15,7 @@
     background-image: url("/src/imgs/hero_Img.png");
     background-size: contain;   
     background-position: right; 
-    background-repeat: no-repeat;       
+    background-repeat: no-repeat;     
 }
 
 .hero-section::before {
@@ -43,26 +43,93 @@
     color: var(--text-color);   
     font-size: var(--h1-size);
     text-align: center;
+    opacity: 0;
+    transform: translateX(-500px);
+    animation: moveRight 1.5s ease-out forwards;
+    animation-delay: 0s; 
+
+}
+
+.hero-section h1 span {
+    color: transparent;
+    background: linear-gradient(
+        to bottom right,
+        var(--primary-color),
+        var(--accent-color),
+        var(--secondary-color),
+        var(--tertiary-color),
+        var(--queternary-color)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hero-section p {
+    font-family: var(--font-family-primary);    
+    color: var(--text-color);   
+    font-size: var(--h3-size);
+    text-align: center;
+    opacity: 0;
+    transform: translatex(-500px);
+    animation: moveRight 1.5s ease-out forwards;
+    animation-delay: 0.5s; 
 }
 
 .hero-section a {    
     font-family: var(--font-family-tertiary);  
-    font-size: var(--subtitle-size);
-    background-color: var(--primary-color);
+    font-size: var(--h4-size);
+    background-color: var(--tertiary-color);
     color: var(--text-color);
     text-decoration: none;
-    font-size: var(--paragraf-size);
     font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 20px;
+    padding: 1.1rem 3rem;
+    border-radius: 40px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.3s;
+    transition: background-color 0.4s ease, transform 0.3s ease;
     z-index: 100;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: moveUp 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .hero-section a:hover {
     background-color: var(--accent-color);
-    transform: scale(1.1);
+    transform: translateY(-5px);
 }
 
 .musicians-section {    
@@ -193,45 +260,100 @@
     width: 100%; 
     height: auto; 
     padding: 50px 0;
-    gap: 30px;
-    background: linear-gradient(180deg, #121212, #3a76b7,#121212);
+    gap: 50px;
+    z-index: 100;
+    background: none;
+    /*background: linear-gradient(180deg, #121212, #1E90FF,#121212);*/
 }
 
-.instruments-section div article h3 {
+.instruments-section h3 {
     color: var(--text-color);
     font-family: var(--font-family-primary); 
     font-size: var(--h2-size);
     margin: 0;
 }
 
-.instruments-section div article img {
-    width: 60%;
+.instruments-section img {
+    width: 50%;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.instruments-section div article a{
-    font-family: var(--font-family-tertiary);  
-    font-size: var(--subtitle-size);
-    background-color: var(--primary-color);
+.instruments-section article:hover img {
+    
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px var(--primary-color);
+}
+
+.instruments-section a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--text-color);
-    text-decoration: none;
-    font-size: var(--paragraf-size);
+    font-family: var(--font-family-primary);
     font-weight: bold;
-    padding: 12px 72px;
-    border-radius: 20px;
-    cursor: pointer;
+    text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
     z-index: 100;
 }
 
-.instruments-section div article a:hover {
-    background-color: var(--accent-color);
+.instruments-section a i {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.instruments-section a:hover {
+    box-shadow: 0px 0px 20px var(--accent-color);
     transform: scale(1.1);
 }
 
-.instruments-section div article a:active {
-    transform: scale(0.95);
-    background-color: #885727;
+.instruments-section div article a:hover i {
+    transform: rotate(360deg);
 }
+
+.instruments-section div article a i:active {
+    transform: scale(1);
+}
+
+/* Contenedor de las notas */
+.background-notes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con los clics */
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Estilos base para las notas */
+.music-note {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    animation: floatNote 10s ease-in infinite;
+}
+
+/* Animación de flotación */
+@keyframes floatNote {
+    0% {
+        opacity: 0.5;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10vh) rotate(180deg);
+    }
+}
+
+
 
 /* pantalla mobile init */
 
@@ -268,7 +390,7 @@
 @media screen and (max-width: 430px) {
 
     .hero-section {
-        background-image: url(../imgs/heroMovil.png);
+        background-image: none;
         background-size: 80%;
         background-position: bottom right;
         padding: 150px 50px 0 30px;
@@ -283,6 +405,11 @@
         color: var(--text-color);   
         font-size: var(--h2-size);
         text-align: left;
+    }
+
+    .hero-section a {
+        font-size: var(--paragraf-size);
+        padding: 1rem 1.2rem;
     }
 
     .musicians-section {    
