@@ -1,17 +1,4 @@
-/* HOME */  
-
-/**{
-    border: 1px solid red;
-}*/
-
-canvas{
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background:none;
-    position: fixed;
-}
+/* HOME */
 
 .hero-section { 
     height: 80vh;
@@ -20,13 +7,14 @@ canvas{
     justify-content: center;
     align-items: start;
     padding-left: 150px;
-    background-image: url("/Toquen-el-Dom.-Music-School/src/imgs/hero_Img.png");
+    /*background-image: url("/Toquen-el-Dom.-Music-School/src/imgs/hero_Img.png");*/
+    background-image: url("/src/imgs/hero_Img.png");
     background-size: contain;   
     background-position: right; 
     background-repeat: no-repeat;       
 }
 
-.hero-section::before{
+.hero-section::before {
     content: "";
     position: absolute;
     top: 0;
@@ -220,6 +208,7 @@ canvas{
 /* pantalla mobile init */
 
 @media (width<900px) {
+
     .hero-section {
         justify-content: start;
         padding: 220px 50px;
@@ -233,9 +222,11 @@ canvas{
         padding: 100px 0;
         gap: 40px;
     }
+
 }
 
 @media (width<700px) {
+
     .instruments-section div { 
         flex-direction: column; 
     }
@@ -243,6 +234,7 @@ canvas{
     .instruments-section  div{
         gap: 100px;
     }
+
 }
 
 @media screen and (max-width: 430px) {
@@ -254,7 +246,7 @@ canvas{
         padding: 150px 50px 0 30px;
     }
 
-    .hero-section::before{
+    .hero-section::before {
         height: 80%;
     }
 
@@ -279,7 +271,6 @@ canvas{
     .card {
         height: 380px;
     }
-
 
 }
 

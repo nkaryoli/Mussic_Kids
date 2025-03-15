@@ -1,4 +1,3 @@
-/*  LOS ESTILOS DE styles.css SE APLICAN DE MANERA GLOBAL EN TODAS LAS PAGES    */
 @import "./base.css";
 
 :root {
@@ -28,5 +27,14 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #121212;
+    background-color: var(--background-color);
+}
+
+canvas {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:none;
+    position: fixed;
 }

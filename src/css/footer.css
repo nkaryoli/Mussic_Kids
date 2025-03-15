@@ -1,4 +1,3 @@
-
 footer {
 	display: flex;
 	justify-content: center;
@@ -19,18 +18,18 @@ footer {
     margin: 0;
 }
 
-footer img{
+footer img {
     height: 32px;
     padding: 8px;
 }
 
-.info_footer{
+.info_footer {
 	display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer p{
+footer p {
     display: flex;
     align-items: center;
     margin: 0;

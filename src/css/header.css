@@ -1,12 +1,4 @@
-
-/** {
-    box-sizing: border-box;
-    border: 1px solid red;
-    margin: 0;
-}*/
-
-
-header div, header div img{
+header div, header div img {
     height: 100px;
 }
 
@@ -81,6 +73,7 @@ header a:hover {
 }
 
 @media (min-width: 610px) {
+    
     header{
         width: 100%;
         height: 120px;
@@ -109,7 +102,6 @@ header a:hover {
     .navBar a {
         font-family: var(--font-family-primary);
         font-size: var(--h4-size);
-
     }
 
 
@@ -117,4 +109,5 @@ header a:hover {
         flex-direction: row;
         gap: 20px;
     }
+
 }

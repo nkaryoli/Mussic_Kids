@@ -1,15 +1,15 @@
-.mainInstruments{
+.mainInstruments {
     padding: 100px 0;
 }
 
-.titleInstruments h1{
+.titleInstruments h1 {
     font-family: var(--font-family-primary);
     color: var(--primary-color);
     font-size: var(--h1-size);
     text-align: center;
 }
 
-.titleInstruments h3{
+.titleInstruments h3 {
     padding: 1em;
     color: var(--secondary-color);
     font-size: var(--h3-size);
@@ -18,24 +18,24 @@
     text-align: center;
 }
 
-.instrumentsBox{
+.instrumentsBox {
     width: 100%;
     padding: 100px;
     background-image: linear-gradient(rgb(18,18,18), #273c52, rgb(18,18,18));
 }
 
-.instrumentsbox h2{
+.instrumentsbox h2 {
     color: var(--text-color);
     font-size: var(--h2-size);
     text-align: center;
 }
 
-.instrumentsBox div img{
+.instrumentsBox div img {
     width: 35%;
     height: auto;
 }
 
-.instrumentsBox div{
+.instrumentsBox div {
     width: 100%;
     display: flex;
     gap: 50px;
@@ -44,21 +44,21 @@
     margin-top: 2rem;
 }
 
-.instrumentsBox div .descriptionBox{
+.instrumentsBox div .descriptionBox {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.instrumentsBox div .descriptionBox p{
+.instrumentsBox div .descriptionBox p {
     color: var(--text-color);
     font-family: var(--font-family-tertiary);
     font-size: var(--paragraf-size);
     text-align: center;
 }
 
-.descriptionBox a{
+.descriptionBox a {
     width: 200px; 
     height: 40px; 
     text-decoration: none;
@@ -80,13 +80,13 @@
     box-shadow: 0 0 20px rgba(255, 153, 51, 0.8);
 }
 
-@media (430px < width < 900px){
+@media (430px < width < 900px) {
 
-    .titleInstruments{
+    .titleInstruments {
         padding: 0 10%;
     }
 
-    .instrumentsBox{
+    .instrumentsBox {
         padding: 10%;
     }
 
@@ -97,32 +97,33 @@
         gap: 0px;
     }
 
-    .instrumentsBox div img{
+    .instrumentsBox div img {
         width: 60%;
         height: auto;
     }
 
-    .instrumentsBox div .descriptionBox{
+    .instrumentsBox div .descriptionBox {
         width: 100%;
         gap: 30px;
     }
+
 }
 
-@media (width<430px){
+@media (width<430px) {
 
-    .mainInstruments{
+    .mainInstruments {
         padding: 150px 0;
     }
 
-    .titleInstruments h1{
+    .titleInstruments h1 {
         font-size: var(--h3-size);
     }
 
-    .titleInstruments h3{
+    .titleInstruments h3 {
         font-size: var(--h5-size);
     }
 
-    .instrumentsBox{
+    .instrumentsBox {
         padding: 20px 20px 100px 20px;
     }
 
@@ -132,7 +133,7 @@
         gap: 0px;
     }
 
-    .instrumentsBox div img, .instrumentsBox div .descriptionBox{
+    .instrumentsBox div img, .instrumentsBox div .descriptionBox {
         width: 100%;
         gap: 20px;
     }

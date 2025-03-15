@@ -66,8 +66,6 @@
     top: 42px;
 }
 
-
-
 /* dando estilos a cada contenedor de notas. 22 contenedores a lo largo de cada cuerda. lineas verticales*/
 
 .note-fret {
@@ -240,8 +238,8 @@ iframe {
     padding-top: 250px;
 }
 
-
 @keyframes example {
+
     0% {
         transform: rotate(-1deg);
     }
@@ -249,6 +247,7 @@ iframe {
     100% {
         transform: rotate(1deg);
     }
+
 }
 
 @media (width<800px) {
@@ -274,6 +273,7 @@ iframe {
         width: 100%;
         margin-top:  40px;
     }
+
 }
 
 .rotate_screen {
@@ -281,8 +281,8 @@ iframe {
 }
 
 @media (width<800px) and (orientation: portrait) {
-    .rotate_screen {
 
+    .rotate_screen {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -298,6 +298,6 @@ iframe {
         color: var(--text-color);
         font-size: var(--h1-size);
         font-family: var(--font-family-primary);
-
     }
+
 }
