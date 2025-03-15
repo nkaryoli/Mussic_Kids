@@ -127,6 +127,7 @@ h2{
         text-align: center;
         box-shadow: 0 4px 4px 0 rgba(255, 153, 51, 0.50);
         font-family: var(--font-family-tertiary);
+        z-index: 100;
     }
 
     .tutorial-div {
@@ -136,6 +137,10 @@ h2{
         gap: 50px;
         justify-content: space-evenly;
         margin: 2%;
+    }
+    
+    .tutorial-div iframe {
+        z-index: 100;
     }
 
     @media screen and (max-width: 800px) {
