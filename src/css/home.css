@@ -1,12 +1,16 @@
 /* HOME */
 
+/** {
+    border: 1px solid red;
+}*/
+
 .hero-section { 
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding-left: 150px;
+    padding-left: 100px;
     /*background-image: url("/Toquen-el-Dom.-Music-School/src/imgs/hero_Img.png");*/
     background-image: url("/src/imgs/hero_Img.png");
     background-size: contain;   
@@ -24,18 +28,41 @@
     background-image: linear-gradient(to bottom right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(51, 152, 255, 0.1), rgba(18, 18, 18, 0));
 }
 
+.hero-section div {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 100;
+}
+
 .hero-section h1 {    
     font-family: var(--font-family-primary);    
     color: var(--text-color);   
-    font-size: var(--h2-size);
+    font-size: var(--h1-size);
     text-align: center;
 }
 
 .hero-section a {    
-    font-family: var(--font-family-secondary);  
-    color: var(--accent-color); 
+    font-family: var(--font-family-tertiary);  
     font-size: var(--subtitle-size);
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
+    font-size: var(--paragraf-size);
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s;
+    z-index: 100;
+}
+
+.hero-section a:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
 }
 
 .musicians-section {    
@@ -77,7 +104,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 0.6s;
+    transition: transform 0.6s ease-in-out;
     transform-style: preserve-3d;
 }
 
@@ -87,6 +114,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    color: var(--text-color);
     backface-visibility: hidden; /* Oculta el lado trasero al girar */
     display: flex;
     flex-direction: column;
@@ -103,7 +131,7 @@
   /* Estilos de cada lado */
 .card-front {
     padding: 40px;
-    color: var(--text-color);
+    font-family: var(--font-family-primary);
 }
 
 .card-front img {
@@ -112,8 +140,9 @@
 }
 
 .card-back {
+    text-align: center;
+    font-family: var(--font-family-tertiary);
     background-color: var(--secondary-color);
-    color: var(--text-color);
     transform: rotateY(180deg); /* Inicialmente volteado */
 }
 
@@ -180,24 +209,23 @@
 }
 
 .instruments-section div article a{
-    width: 200px; 
-    height: 40px; 
+    font-family: var(--font-family-tertiary);  
+    font-size: var(--subtitle-size);
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
-    color: var(--background-color);
-    font-family: var(--font-family-primary);
-    font-size: var(--h5-size);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px; 
-    background-color: var(--primary-color); 
+    font-size: var(--paragraf-size);
+    font-weight: bold;
+    padding: 12px 72px;
+    border-radius: 20px;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 100;
 }
 
 .instruments-section div article a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 153, 51, 0.8);
+    background-color: var(--accent-color);
+    transform: scale(1.1);
 }
 
 .instruments-section div article a:active {

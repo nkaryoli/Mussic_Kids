@@ -1,13 +1,15 @@
 @import "./base.css";
 
 :root {
-    --primary-color: #ff9933;
-    --secondary-color: #3398ff;
-    --accent-color: #B326B7;
+    --primary-color: #FF9800;
+    --secondary-color: #1E90FF;
+    --tertiary-color: #32CD32;
+    --queternary-color: #FFD700;
+    --accent-color: #FF4081;
     --text-color: #f5f5f5;
     --background-color: #121212;
-    --font-family-primary: 'khand', sans-serif;
-    --font-family-secondary: 'Merriweather', sans-serif;
+    --font-family-primary: 'Baloo 2', sans-serif;
+    --font-family-secondary: 'Fredoka One', sans-serif;
     --font-family-tertiary: 'Montserrat', sans-serif;
     --h1-size: 3rem;
     --h2-size: 2.25rem;
@@ -15,7 +17,7 @@
     --h4-size: 1.8rem;
     --h5-size: 1.5em;
     --sub-title: 1.5rem;
-    --paragraf-size: 1rem;
+    --paragraf-size: 1.1rem;
 }
 
 * {
