@@ -4,38 +4,25 @@
     border: 1px solid red;
 }*/
 
+/* ===================== Hero Section ===================== */
+
 .hero-section { 
     height: 80vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-left: 100px;
-    background-image: url("/Toquen-el-Dom.-Music-School/src/imgs/hero_Img.png");
-    /*background-image: url("/src/imgs/hero_Img.png");*/
-    background-size: contain;   
-    background-position: right; 
-    background-repeat: no-repeat;     
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 8%; 
 }
 
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(51, 152, 255, 0.1), rgba(18, 18, 18, 0));
-}
 
-.hero-section div {
+.hero-section .heroText {
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    z-index: 100;
 }
 
 .hero-section h1 {    
@@ -43,11 +30,11 @@
     color: var(--text-color);   
     font-size: var(--h1-size);
     text-align: center;
-    opacity: 0;
+    background: none;
     transform: translateX(-500px);
     animation: moveRight 1.5s ease-out forwards;
     animation-delay: 0s; 
-
+    
 }
 
 .hero-section h1 span {
@@ -59,12 +46,13 @@
         var(--secondary-color),
         var(--tertiary-color),
         var(--queternary-color)
-    );
+        );
     background-clip: text;
     -webkit-background-clip: text;
 }
 
 .hero-section p {
+    max-width: 550px;
     font-family: var(--font-family-primary);    
     color: var(--text-color);   
     font-size: var(--h3-size);
@@ -94,6 +82,11 @@
     animation-delay: 1s;
 }
 
+.hero-section a:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
 @keyframes moveUp {
     0% {
         transform: translateY(80px);
@@ -116,21 +109,44 @@
     }
 }
 
-@keyframes moveLeft {
+.hero-section .heroImg {
+    max-width: 50%;
+    padding: 100px;
+    background-image: radial-gradient(
+        circle at center,
+        rgba(50, 205, 50, 0.8),
+        rgba(50, 205, 50, 0.5),
+        rgba(50, 205, 50, 0.2),
+        rgba(50, 205, 50, 0.1),
+        rgba(255, 215, 0, 0),
+        rgba(255, 215, 0, 0),
+        rgba(255, 215, 0, 0)
+    );
+    border-radius: 100%;
+    will-change: transform, opacity;
+    animation: appear 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hero-section img {
+    max-width: 500px;
+    display: flex;
+    justify-self: center;
+}
+
+@keyframes appear {
     0% {
-        transform: translateX(40px);
         opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.1);
     }
     100% {
-        transform: translateX(0);
-        opacity: 1;
+        transform: scale(1);
     }
 }
 
-.hero-section a:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-5px);
-}
+/* ===================== Musicians Section ===================== */
 
 .musicians-section {    
     width: 100%; 
@@ -166,6 +182,9 @@
     z-index: 100;
 }
 
+.card p {
+    text-align: center;
+}
 /* Estructura interna de la tarjeta */
 .card-inner {
     width: 100%;
@@ -218,6 +237,8 @@
     transform: rotateY(180deg);
 }
 
+/* ===================== Instruments Section ===================== */
+
 .instruments-section {
     width: 100%; 
     display: flex;  
@@ -228,18 +249,17 @@
     gap: 40px;
 }
 
-.instruments-section h2 {
+.instruments-section h1 {
     color: var(--primary-color);
     font-family: var(--font-family-primary); 
     font-size: var(--h1-size);
-    margin: 0;
+    text-align: center;
 }
 
-.instruments-section h4 {
+.instruments-section p {
     color: var(--secondary-color);
-    font-family: var(--font-family-secondary); 
+    font-family: var(--font-family-primary); 
     font-size: var(--h2-size);
-    margin: 0;
     text-align: center;
 }
 
@@ -263,7 +283,6 @@
     gap: 50px;
     z-index: 100;
     background: none;
-    /*background: linear-gradient(180deg, #121212, #1E90FF,#121212);*/
 }
 
 .instruments-section h3 {
@@ -280,7 +299,6 @@
 }
 
 .instruments-section article:hover img {
-    
     transform: scale(1.1);
     box-shadow: 0px 0px 20px var(--primary-color);
 }
@@ -353,36 +371,56 @@
     }
 }
 
-
-
-/* pantalla mobile init */
+/* ====================================== Resppnsive ====================================== */
 
 @media (width<900px) {
 
     .hero-section {
-        justify-content: start;
-        padding: 220px 50px;
+        justify-content: center;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    
+    .hero-section .heroImg {
+        display: none;
     }
 
     .card {
-        height: 440px;
+        height: 340px;
     }
 
+    .card-front {
+        padding: 25px 10px;
+        font-family: var(--font-family-primary);
+    } 
+
+    .card-front img {
+        width: 50%;
+    }
+    
     .instruments-section {
         padding: 100px 0;
-        gap: 40px;
+    }
+
+    .instruments-section div { 
+        gap: 20px; 
+    }
+
+    .instruments-section img {
+        width: 80%;
     }
 
 }
 
 @media (width<700px) {
 
+    .hero-section {
+        height: auto;
+        padding-top: 150px;
+    }
+
     .instruments-section div { 
         flex-direction: column; 
-    }
-    
-    .instruments-section  div{
-        gap: 100px;
     }
 
 }
@@ -390,21 +428,13 @@
 @media screen and (max-width: 430px) {
 
     .hero-section {
-        background-image: none;
-        background-size: 80%;
-        background-position: bottom right;
-        padding: 150px 50px 0 30px;
-    }
-
-    .hero-section::before {
-        height: 80%;
+        padding-top: 200px;
     }
 
     .hero-section h1 {    
         font-family: var(--font-family-primary);    
         color: var(--text-color);   
         font-size: var(--h2-size);
-        text-align: left;
     }
 
     .hero-section a {
@@ -423,10 +453,22 @@
         gap: 50px;
     }
 
-    .card {
-        height: 380px;
+    .card-front img {
+        width: 50%;
+    }
+
+    .instruments-section {
+        padding: 50px 0;
+        gap: 10px;
+    }
+
+    .instruments-section h1 {   
+        font-size: var(--h2-size);
+    }
+    
+    .instruments-section  div{
+        gap: 10px;
+        padding: 0;
     }
 
 }
-
-/* pantalla mobile  end */
