@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instruments - Music School kids</title>
-    <link rel="stylesheet" href="/Toquen-el-Dom.-Music-School/src/css/styles.css">
-    <!--<link rel="stylesheet" href="/src/css/styles.css">-->
+    <!--<link rel="stylesheet" href="/Toquen-el-Dom.-Music-School/src/css/styles.css">-->
+    <link rel="stylesheet" href="/src/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,8 +19,8 @@
     <div class="fixed-notes"></div>
     <header>
         <div>
-            <img src="/Toquen-el-Dom.-Music-School/src/imgs/SM_Logo_sin_fondo.png" alt="">
-            <!--<img src="/src/imgs/SM_Logo_sin_fondo.png" alt="">-->
+            <!--<img src="/Toquen-el-Dom.-Music-School/src/imgs/SM_Logo_sin_fondo.png" alt="">-->
+            <img src="/src/imgs/SM_Logo_sin_fondo.png" alt="">
         </div>
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
         <label for="menu-toggle" class="menu-icon">☰</label>
@@ -33,29 +33,88 @@
         </nav>
     </header>
 
-    <main class="mainInstruments">
+    <main class="instrument-hero">
+        <div class="stage-container">
+            <div class="lights">
+                <div class="right-light-1"></div>
+                <div class="right-light-2"></div>
+                <div class="left-light-1"></div>
+                <div class="left-light-2"></div>
+            </div>
+            <div class="pet-container">
+                <img src="/src/imgs/heroPet.png" alt="Pet">
+            </div>
+            <div class="floor"></div>
+        </div>
+        <div class="instrument-hero__content">
+            <h1>"Find Your Sound, Play Your Passion!"</h1>
+            <p>From piano to guitar, explore the world of music and let the rhythm guide you.</p>
+            <span>Choose your instrument.<br>Feel the music.!!</span>
+        </div>
+    </main> 
 
-        <h1>Have fun and learn while playing our virtual instruments!!</h1>    
+    <section class="instruments-Container">
         <h2>Virtual Piano</h2>
         <div class="instrumentsBox">
-            <img src="/Toquen-el-Dom.-Music-School/src/imgs/IMGpiano.png">
-            <!--<img src="/src/imgs/IMGpiano.png">-->
+            <!--<img src="/Toquen-el-Dom.-Music-School/src/imgs/img_piano.png">-->
             <span class="icon info" data-tooltip="Este es un piano eléctrico con teclas sensibles al tacto.">🎹</span>
             <span class="icon sound" data-tooltip="Su sonido es cálido y realista, ideal para jazz y clásica.">🔊</span>
             <span class="icon price" data-tooltip="Desde 500€ según la marca y modelo.">💰</span>
-            <a href="../pages/piano.html" class="playBtn"><i class="fa fa-play"></i>PLAY</a>
+            
+            <div class="icons-container">
+                <div class="icon-box">
+                    <label for="toggle1" class="icon">🎹</label>
+                    <input type="radio" name="toggleGroup" id="toggle1">
+                    <span id="infoSpan1">¡Aquí está la información!</span>
+                </div>
+                <div class="icon-box">
+                    <label for="toggle2" class="icon">🔊</label>
+                    <input type="radio" name="toggleGroup" id="toggle2">
+                    <span id="infoSpan2">¡Aquí está la información!</span>
+                </div>
+                <div class="icon-box">
+                    <label for="toggle3" class="icon">💰</label>
+                    <input type="radio" name="toggleGroup" id="toggle3">
+                    <span id="infoSpan3">¡Aquí está la información!</span>
+                </div>
+            </div>
+            
+            <div>
+                <img src="/src/imgs/IMGpiano.png">
+                <a href="../pages/piano.html" class="playBtn"><i class="fa fa-play"></i>PLAY</a>
+            </div>
         </div>
     
         <h2>Virtual Bass</h2>
-        <div class="instrumentsBox">
-            <img src="/Toquen-el-Dom.-Music-School/src/imgs/IMGbass.png">
-            <!--<img src="/src/imgs/IMGbass.png">-->
+        <div class="instrumentsBox"> 
             <span class="icon info" data-tooltip="Este es un piano eléctrico con teclas sensibles al tacto.">🎹</span>
             <span class="icon sound" data-tooltip="Su sonido es cálido y realista, ideal para jazz y clásica.">🔊</span>
             <span class="icon price" data-tooltip="Desde 500€ según la marca y modelo.">💰</span>
-            <a href="../pages/bajo.html" class="playBtn bassPlayBtn"><i class="fa fa-play"></i>Play</a>
+
+            <div>
+                <img src="/src/imgs/IMGbass.png">
+                <a href="../pages/bajo.html" class="playBtn bassPlayBtn"><i class="fa fa-play"></i>Play</a>
+            </div>
+
+            <div class="icons-container">
+                <div class="icon-box">
+                    <label for="toggle4" class="icon">🎹</label>
+                    <input type="radio" name="toggleGroup" id="toggle4">
+                    <span id="infoSpan4">¡Aquí está la información!</span>
+                </div>
+                <div class="icon-box">
+                    <label for="toggle5" class="icon">🔊</label>
+                    <input type="radio" name="toggleGroup" id="toggle5">
+                    <span id="infoSpan5">¡Aquí está la información!</span>
+                </div>
+                <div class="icon-box">
+                    <label for="toggle6" class="icon">💰</label>
+                    <input type="radio" name="toggleGroup" id="toggle6">
+                    <span id="infoSpan6">¡Aquí está la información!</span>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
     <footer>
         <div class="info_footer"> 
@@ -72,12 +131,10 @@
             </ul>
     </footer>
     <canvas></canvas>
-    <script src="/Toquen-el-Dom.-Music-School/src/javascript/particles.js"></script>
-    <script src="/Toquen-el-Dom.-Music-School/src/javascript/notesBg.js"></script>
-    <script src="/Toquen-el-Dom.-Music-School/src/javascript/scrollAnimation.js"></script>
-    <!--<script src="/src/javascript/particles.js"></script>
+    <!--<script src="/Toquen-el-Dom.-Music-School/src/javascript/particles.js"></script>-->
+    <script src="/src/javascript/particles.js"></script>
     <script src="/src/javascript/notesBg.js"></script>
-    <script src="/src/javascript/scrollAnimation.js"></script>-->
+    <script src="/src/javascript/scrollAnimation.js"></script>
 </body>
 
 </html>

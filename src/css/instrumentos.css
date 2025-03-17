@@ -21,39 +21,368 @@
 
 /* =============== Instruments ================== */
 
-.mainInstruments {
-    padding: 100px 0;
+.instrument-hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 7%;
+    gap: 5%;
+}
+
+/* Hero lights animation */
+
+.stage-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    animation: appear 2s ease-in-out both;
+}
+
+.pet-container {
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+.pet-container img {
+    width: 100%;
+    z-index: 1;
+}
+
+.pet-container::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 60%;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    filter: blur(8px);
+    z-index: 1;
+}
+
+.lights {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.floor {
+    position: absolute;
+    bottom: -80px;
+    right: -50px;
+    width: 150%;
+    height: 100px;
+    border-radius: 5px 100px 0px 0px;
+    z-index: 2;
+    background: linear-gradient(rgb(11, 11, 11), rgba(11, 11, 11), rgba(11, 11, 11, 0.9), rgba(11, 11, 11, 0));
+}
+
+/* left side */
+
+.left-light-1 {
+    position: absolute;
+    top: 50px;
+    left: -100px;
+    height: 50vh;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform-origin: top center;
+    opacity: 0;
+    z-index: 1;
+    animation: partyLeft 3s ease 2s infinite, showLights 1s ease 2s both; /*  */
+}
+
+.left-light-1::before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    transition: 0.5s;
+    transform: rotate(-30deg);
+    pointer-events: none;
+    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 20px rgba(255, 64, 129, 0.8));
+}
+
+.left-light-1::after {
+    content: "";
+    background: linear-gradient(rgba(255, 64, 129, 0.6), rgba(255, 64, 129, 0));
+    filter: blur(30px);
+    height: 50vh;
+    width: 200px;
+    z-index: 1;
+    clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.left-light-2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top center; 
+    z-index: -1;
+    animation: partyLeft 3s ease 2.5s infinite reverse, showLights 1s ease 2.5s both; /*  */
+}
+
+.left-light-2::before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    transition: 0.5s;
+    transform: rotate(-31deg);
+    pointer-events: none;
+    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 20px rgba(255, 152, 0, 0.8));
+}
+
+.left-light-2::after {
+    content: "";
+    background: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0));
+    filter: blur(30px);
+    height: 50vh;
+    width: 200px;
+    top: 200px;
+    left: -50px;
+    z-index: 1;
+    clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+@keyframes partyLeft {
+    0% {
+        transform: rotate(-35deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(-35deg);
+    }
+}
+
+/* right side */
+
+.right-light-1 {
+    position: absolute;
+    top: 50px;
+    right: -20px;
+    height: 50vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top center; 
+    z-index: 1;
+    animation: partyRight 3s ease 3.5s infinite reverse, showLights 1s ease 3.5s both;
+}
+
+.right-light-1::before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    transition: 0.5s;
+    transform: rotate(-31deg);
+    pointer-events: none;
+    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 20px rgba(50, 205, 50, 0.8));
+}
+
+.right-light-1::after {
+    content: "";
+    background: linear-gradient(rgba(50, 205, 50, 0.6), rgba(50, 205, 50, 0));
+    filter: blur(30px);
+    height: 50vh;
+    width: 200px;
+    z-index: -1;
+    clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.right-light-2{
+    position: absolute;
+    top: 0px;
+    right: 80px;
+    height: 50vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top center;
+    z-index: -1;
+    animation: partyRight 3s ease 3s infinite, showLights 1s ease 3s both;
+}
+
+.right-light-2::before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    transition: 0.5s;
+    transform: rotate(-31deg);
+    pointer-events: none;
+    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 20px rgba(30, 205, 255, 0.8));
+}
+
+.right-light-2::after {
+    content: "";
+    background: linear-gradient(rgba(30, 144, 255, 0.3), rgba(30, 144, 255, 0));
+    filter: blur(30px);
+    height: 50vh;
+    width: 200px;
+    z-index: -1;
+    clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+@keyframes partyRight {
+    0% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(25deg);
+    }
+}
+
+@keyframes showLights {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* */
+
+
+.instrument-hero__content {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.instrument-hero__content h1 {
+    color: transparent;
+    background: linear-gradient(
+        to bottom right,
+        var(--primary-color),
+        var(--accent-color)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-family: var(--font-family-primary);
+        font-size: var(--h1-size);
+        animation: moveRight 0.6s ease-out both;/*  */
+    }
+    
+    .instrument-hero__content p {
+        color: var(--text-color);
+        font-family: var(--font-family-secondary);
+        font-size: var(--h3-size);
+        max-width: 800px;
+        animation: moveUp 0.6s ease-out 0.5s both;/*  */
+    }
+
+    .instrument-hero__content span {
+        color: transparent;
+        background: linear-gradient(
+            to bottom right,
+            var(--primary-color),
+        var(--accent-color),
+        var(--secondary-color),
+        var(--tertiary-color),
+        var(--queternary-color)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-family: var(--font-family-primary);
+        font-weight: bold;
+    font-size: var(--h2-size);
+    animation: appear 1s ease-in-out 0.8s both, pulse 3s cubic-bezier(0.4, 0, 0.2, 1) 1s infinite;/*  */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(30, 205, 255, 0.5));
+    }
+    50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 30px rgba(30, 205, 255, 1));
+        
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(30, 205, 255, 0.5));
+    }
+}
+
+/* ================ Instruments Seccion ============== */
+
+.instruments-Container {
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 100px;
 }
 
-.mainInstruments h1 {
-    max-width: 900px;
-    font-family: var(--font-family-primary);
-    color: var(--primary-color);
-    font-size: var(--h2-size);
-    text-align: center;
-    animation: moveUp 0.6s ease-out forwards;
-}
-
-.mainInstruments h2 {
+.instruments-Container h2 {
     font-family: var(--font-family-tertiary);
     color: var(--text-color);
     font-size: var(--h1-size);
     text-align: center;
-    animation: moveUp 0.6s ease-out 0.2s both;
 }
 
 .instrumentsBox {
-    max-width: 50%;
-    padding: 120px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 10%;
     cursor: pointer;
     z-index: 100;
     position: relative;
@@ -66,7 +395,7 @@
         rgba(255, 215, 0, 0),
         rgba(255, 215, 0, 0),
         rgba(255, 215, 0, 0)
-    );
+        );
     border-radius: 100%;
     /* animation: appear 2s ease-in; */
     opacity: 0;
@@ -81,15 +410,20 @@
 }
 
 .instrumentsBox img {
+    width: 100%;
     max-width: 500px;
+    display: flex;
+    justify-self: center;
 }
 
 .playBtn {
+    width: 300px;
     display: flex;
     align-items: center;
+    justify-self: center;
     justify-content: center;
     font-size: 1.5rem;
-    padding: 20px 80px;
+    padding: 20px 20px;
     border-radius: 40px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--text-color);
@@ -97,16 +431,14 @@
     font-weight: bold;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
     z-index: 100;
     animation: shakeScale 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-
 }
 
 .bassPlayBtn{
     margin-top: 40px;
 }
+
 .playBtn i {
     margin-right: 10px;
     transition: transform 0.3s ease-in-out;
@@ -115,6 +447,7 @@
 .playBtn:hover {
     box-shadow: 0px 0px 20px var(--accent-color);
     transform: scale(1.1);
+    animation-play-state: paused;
 }
 
 @keyframes shakeScale {
@@ -154,6 +487,7 @@
 .icon.price { top: 65%; right: 20px; transform: translateY(-50%); }
 
 /* Estilos de los iconos */
+
 .icon {
     position: absolute;
     font-size: 50px;
@@ -171,7 +505,7 @@
     padding: 20px;
     border-radius: 50%;
     cursor: pointer;
-    opacity: 0.9;
+    text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: glow 4s infinite ease-in-out, float 5s infinite ease-in-out;
     animation-fill-mode: forwards;
@@ -281,4 +615,127 @@
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
+}
+
+.icons-container {
+    display: none;
+}
+
+@media (max-width: 430px) {
+    
+    .pet-container {
+        width: 100%;
+    }
+
+    .instruments-Container {
+        padding: 20% 0;
+        gap: 50px;
+    } 
+    
+    .instruments-Container h2 {
+        font-size: var(--h2-size);
+        margin-top: 100px;
+    }
+
+    .playBtn {
+        width: 200px;
+    }
+}
+
+/*============ Respponsive ========== */
+
+@media (width<900px) {
+    
+    .instrument-hero {
+        flex-direction: column;
+        padding-top: 10%;
+        gap: 0;
+    }
+
+    .instrument-hero__content {
+        height: auto;
+        padding: 25% 5% 10% 5%;
+    }
+    
+    .instrument-hero__content h1 {
+        font-size: var(--h2-size);
+    }
+    
+    .instrument-hero__content p {
+        font-size: var(--h5-size);
+    }
+    
+    .instrument-hero__content span {
+        font-size: var(--h5-size);
+    }
+
+    .floor {
+        bottom: -39px;
+        height: 50px;
+    }
+
+    /*icons mobile */
+    
+    .icon[data-tooltip] {
+        display: none;
+    }
+    
+    .instrumentsBox {
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .icon {
+        position: relative;
+        font-size: 30px;
+        padding: 7px;
+        animation-play-state: paused;
+    }
+    
+    .icons-container {
+        position: absolute;
+        height: 100%;
+        width: 350px;
+        left: -130px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .icon-box {
+        position: relative;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+
+    #infoSpan1, #infoSpan2, #infoSpan3, #infoSpan4, #infoSpan5, #infoSpan6  {
+        opacity: 0;
+        position: absolute;
+        width: 250px;
+        left: 220px;
+        top: -25px;
+        background-image: linear-gradient(to right, rgb(255, 215, 0, 0.7), rgb(255, 64, 129, 0.7), rgb(30, 144, 255, 0.7), rgb(50, 205, 50, 0.7));
+        color: var(--text-color);
+        padding: 20px;
+        border-radius: 24px;
+        font-size: var(--paragraf-size);
+        font-family: var(--font-family-secondary);
+        font-weight: bold;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease, scale 0.3s ease;
+        transform: translateY(10px) scale(0.9);
+    }
+    
+    #toggle1:checked + #infoSpan1, 
+    #toggle2:checked + #infoSpan2,
+    #toggle3:checked + #infoSpan3,
+    #toggle4:checked + #infoSpan4,
+    #toggle5:checked + #infoSpan5,
+    #toggle6:checked + #infoSpan6  {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
 }
