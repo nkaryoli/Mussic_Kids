@@ -110,7 +110,7 @@
     transition: 0.5s;
     transform: rotate(-30deg);
     pointer-events: none;
-    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -151,7 +151,7 @@
     transition: 0.5s;
     transform: rotate(-31deg);
     pointer-events: none;
-    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -208,7 +208,7 @@
     transition: 0.5s;
     transform: rotate(-31deg);
     pointer-events: none;
-    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -249,7 +249,7 @@
     transition: 0.5s;
     transform: rotate(-31deg);
     pointer-events: none;
-    background-image: url('/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
