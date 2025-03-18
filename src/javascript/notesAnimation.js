@@ -1,5 +1,5 @@
 // Array de íconos de notas musicales
-const noteIcons = ['fa-music', 'fa-headphones', 'fa-guitar', 'fa-drum'];
+const noteIconsAnim = ['fa-music', 'fa-headphones', 'fa-guitar', 'fa-drum'];
 
 // Límite máximo de notas visibles al mismo tiempo
 const MAX_NOTES = 40; 
@@ -13,7 +13,7 @@ function createMusicNote(container) {
     note.classList.add('music-note');
 
     // Ícono aleatorio
-    const randomIcon = noteIcons[Math.floor(Math.random() * noteIcons.length)];
+    const randomIcon = noteIconsAnim[Math.floor(Math.random() * noteIconsAnim.length)];
     note.innerHTML = `<i class="fa ${randomIcon}"></i>`;
 
     // Posición aleatoria dentro del contenedor

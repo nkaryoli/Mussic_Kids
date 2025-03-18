@@ -1,5 +1,5 @@
 // Array de íconos de notas musicales
-const noteIcons = ['fa-music', 'fa-headphones', 'fa-guitar', 'fa-drum'];
+const noteIconsBg = ['fa-music', 'fa-headphones', 'fa-guitar', 'fa-drum'];
 
 // Almacenar posiciones para evitar superposiciones
 const notePositions = [];
@@ -27,7 +27,7 @@ function createStaticMusicNotes(container, numNotes = 20) {
         note.classList.add('static-note');
 
         // Ícono aleatorio
-        const randomIcon = noteIcons[Math.floor(Math.random() * noteIcons.length)];
+        const randomIcon = noteIconsBg[Math.floor(Math.random() * noteIconsBg.length)];
         note.innerHTML = `<i class="fa ${randomIcon}"></i>`;
 
         // Posición aleatoria dentro del contenedor
