@@ -1,4 +1,12 @@
-@import "./base.css";
+@import "./header.css"; 
+@import "./footer.css"; 
+@import "./home.css"; 
+@import "./instruments.css"; 
+@import "./bassGuitar.css"; 
+@import "./piano.css"; 
+@import "./aboutUs.css";
+@import "./animations.css";
+@import "./responsive.css";
 
 :root {
     --primary-color: #FF9800;
