@@ -45,8 +45,8 @@
     </main> 
 
     <section id="explore" class="instruments">
-        <h2>Virtual Piano</h2>
-        <div class="instrumentsBox">
+        <h2 class="instruments__title">Virtual Piano</h2>
+        <div class="instrumentsBox bg--gradiennt-circle">
             <span class="icon info" data-tooltip="Este es un piano eléctrico con teclas sensibles al tacto.">🎹</span>
             <span class="icon sound" data-tooltip="Su sonido es cálido y realista, ideal para jazz y clásica.">🔊</span>
             <span class="icon price" data-tooltip="Desde 500€ según la marca y modelo.">💰</span>
@@ -71,23 +71,17 @@
             
             <div>
                 <!--<img src="/Toquen-el-Dom.-Music-School/src/assets/IMGpiano.png">-->
-                <img src="/src/assets/IMGpiano.png">
-                <a href="../pages/piano.html" class="playBtn"><i class="fa fa-play"></i>PLAY</a>
+                <img src="/src/assets/IMGpiano.png" alt="image of a piano">
+                <a href="../pages/piano.html" class="btn--play"><i class="fa fa-play"></i>PLAY</a>
             </div>
         </div>
     
-        <h2>Virtual Bass</h2>
-        <div class="instrumentsBox"> 
+        <h2 class="instruments__title">Virtual Bass</h2>
+        <div class="instrumentsBox bg--gradiennt-circle"> 
             <span class="icon info" data-tooltip="Este es un piano eléctrico con teclas sensibles al tacto.">🎹</span>
             <span class="icon sound" data-tooltip="Su sonido es cálido y realista, ideal para jazz y clásica.">🔊</span>
             <span class="icon price" data-tooltip="Desde 500€ según la marca y modelo.">💰</span>
-
-            <div>
-                <!-- <img src="/Toquen-el-Dom.-Music-School/src/assets/IMGbass.png"> -->
-                <img src="/src/assets/IMGbass.png">
-                <a href="../pages/bassGuitar.html" class="playBtn bassPlayBtn"><i class="fa fa-play"></i>Play</a>
-            </div>
-
+            
             <div class="icons-container">
                 <div class="icon-box">
                     <label for="toggle4" class="icon">🎹</label>
@@ -104,6 +98,12 @@
                     <input type="radio" name="toggleGroup" id="toggle6">
                     <span id="infoSpan6">¡Aquí está la información!</span>
                 </div>
+            </div>
+            
+            <div>
+                <!-- <img src="/Toquen-el-Dom.-Music-School/src/assets/IMGbass.png"> -->
+                <img src="/src/assets/IMGbass.png" alt="image of a bass guitar">
+                <a href="../pages/bassGuitar.html" class="btn--play btn--bass"><i class="fa fa-play"></i>PLAY</a>
             </div>
         </div>
     </section>
