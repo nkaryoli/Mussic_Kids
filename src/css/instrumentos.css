@@ -2,22 +2,6 @@
     border: 1px solid red;
 }*/
 
-/* ========== Background Notes ================= */
-
-.fixed-notes {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -1; /* Para que esté en el fondo */
-}
-
-.static-note {
-    position: absolute;
-    opacity: 0.2;
-}
 
 /* =============== Instruments ================== */
 
@@ -32,7 +16,7 @@
 
 /* Hero lights animation */
 
-.stage-container {
+/* .stage-container {
     width: 50%;
     height: 100%;
     display: flex;
@@ -40,7 +24,7 @@
     gap: 100px;
     align-items: center;
     animation: appear 2s ease-in-out both;
-}
+} 
 
 .pet-container {
     width: 70%;
@@ -83,82 +67,66 @@
     border-radius: 5px 100px 0px 0px;
     z-index: 2;
     background: linear-gradient(rgb(11, 11, 11), rgba(11, 11, 11), rgba(11, 11, 11, 0.9), rgba(11, 11, 11, 0));
-}
+}*/
 
 /* left side */
 
-.left-light-1 {
-    position: absolute;
+/* .left-light-1 {
     top: 50px;
     left: -100px;
-    height: 50vh;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform-origin: top center;
     opacity: 0;
     z-index: 1;
-    animation: partyLeft 3s ease 2s infinite, showLights 1s ease 2s both; /*  */
-}
+    animation: partyLeft 3s ease 2s infinite, showLights 1s ease 2s both;
+} */
 
-.left-light-1::before {
+/* .left-light-1::before {
     content: "";
     height: 60px;
     width: 60px;
     transition: 0.5s;
     transform: rotate(-30deg);
     pointer-events: none;
-    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
     filter: drop-shadow(0 0 20px rgba(255, 64, 129, 0.8));
 }
-
-.left-light-1::after {
+*/
+/* .left-light-1::after {
     content: "";
-    background: linear-gradient(rgba(255, 64, 129, 0.6), rgba(255, 64, 129, 0));
     filter: blur(30px);
     height: 50vh;
     width: 200px;
-    z-index: 1;
     clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
     transition: 0.5s;
     pointer-events: none;
-}
+    background: linear-gradient(rgba(255, 64, 129, 0.6), rgba(255, 64, 129, 0));
+    z-index: 1;
+} */
 
-.left-light-2 {
-    position: absolute;
+/* .left-light-2 {
     top: 0px;
-    left: 0px;
-    height: 50vh;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform-origin: top center; 
+    left: 0px; 
     z-index: -1;
-    animation: partyLeft 3s ease 2.5s infinite reverse, showLights 1s ease 2.5s both; /*  */
-}
+    animation: partyLeft 3s ease 2.5s infinite reverse, showLights 1s ease 2.5s both;
+} */
 
-.left-light-2::before {
+/* .left-light-2::before {
     content: "";
     height: 60px;
     width: 60px;
     transition: 0.5s;
     transform: rotate(-31deg);
     pointer-events: none;
-    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     filter: drop-shadow(0 0 20px rgba(255, 152, 0, 0.8));
-}
+} */
 
-.left-light-2::after {
+/* .left-light-2::after {
     content: "";
     background: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0));
     filter: blur(30px);
@@ -170,9 +138,9 @@
     clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
     transition: 0.5s;
     pointer-events: none;
-}
+} */
 
-@keyframes partyLeft {
+/* @keyframes partyLeft {
     0% {
         transform: rotate(-35deg);
     }
@@ -182,93 +150,77 @@
     100% {
         transform: rotate(-35deg);
     }
-}
+} */
 
 /* right side */
 
-.right-light-1 {
-    position: absolute;
+/* .right-light-1 {
     top: 50px;
-    right: -20px;
-    height: 50vh;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform-origin: top center; 
+    right: -20px; 
     z-index: 1;
     animation: partyRight 3s ease 3.5s infinite reverse, showLights 1s ease 3.5s both;
-}
+} */
 
-.right-light-1::before {
+/* .right1::before {
     content: "";
     height: 60px;
     width: 60px;
     transition: 0.5s;
     transform: rotate(-31deg);
     pointer-events: none;
-    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; /
     filter: drop-shadow(0 0 20px rgba(50, 205, 50, 0.8));
-}
+}*
 
-.right-light-1::after {
-    content: "";
-    background: linear-gradient(rgba(50, 205, 50, 0.6), rgba(50, 205, 50, 0));
+.right1::after {
+    /* content: "";
     filter: blur(30px);
     height: 50vh;
     width: 200px;
-    z-index: -1;
     clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
     transition: 0.5s;
     pointer-events: none;
-}
+    background: linear-gradient(rgba(50, 205, 50, 0.6), rgba(50, 205, 50, 0));
+    z-index: -1;
+} */
 
-.right-light-2{
-    position: absolute;
+/* .right-light-2{
     top: 0px;
     right: 80px;
-    height: 50vh;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform-origin: top center;
     z-index: -1;
     animation: partyRight 3s ease 3s infinite, showLights 1s ease 3s both;
-}
+} */
 
-.right-light-2::before {
+/*.right-light-2::before {
     content: "";
     height: 60px;
     width: 60px;
     transition: 0.5s;
     transform: rotate(-31deg);
     pointer-events: none;
-    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/src/imgs/stageLamp.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
     filter: drop-shadow(0 0 20px rgba(30, 205, 255, 0.8));
-}
+}*/
 
-.right-light-2::after {
+/* .right-light-2::after {
     content: "";
-    background: linear-gradient(rgba(30, 144, 255, 0.3), rgba(30, 144, 255, 0));
     filter: blur(30px);
     height: 50vh;
     width: 200px;
-    z-index: -1;
     clip-path: polygon(45% 0, 60% 0, 100% 100%, 0 100%);
     transition: 0.5s;
     pointer-events: none;
-}
+    background: linear-gradient(rgba(30, 144, 255, 0.3), rgba(30, 144, 255, 0));
+    z-index: -1;
+} */
 
-@keyframes partyRight {
+/* @keyframes partyRight {
     0% {
         transform: rotate(25deg);
     }
@@ -287,7 +239,7 @@
     100% {
         opacity: 1;
     }
-}
+} */
 
 /* */
 
