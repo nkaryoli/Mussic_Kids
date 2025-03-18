@@ -109,6 +109,7 @@ html {
     align-items: center;
     padding: 4% 7%;
     gap: 5%;
+    overflow-x: hidden;
 }
 
 .hero__content {
