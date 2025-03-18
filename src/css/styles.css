@@ -88,11 +88,10 @@ body{
 }
 
 .hero {
-    height: 80vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 7%;
+    padding: 4% 7%;
     gap: 5%;
 }
 
@@ -152,19 +151,19 @@ body{
 .btn--play {
     color: var(--text-color);
     font-family: var(--font-family-primary);
+    font-size: var(--h5-size);
     font-weight: bold;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-self: center;
     justify-content: center;
-    font-size: var(--h5-size);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     padding: 15px 25px;
     border-radius: 40px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: shakeScale 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: shakeScale 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     z-index: 100;
 }
 
@@ -175,4 +174,18 @@ body{
 
 .btn--play:hover i {
     transform: rotate(360deg);
+}
+
+@media (width<900px) {
+
+    .hero {
+        flex-direction: column;
+        padding-top: 10%;
+        gap: 0;
+    }
+
+    .btn--play {
+        font-size: var(--paragraf-size);
+        padding: 10px 15px;
+    }
 }

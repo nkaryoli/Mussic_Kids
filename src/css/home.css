@@ -251,7 +251,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 7%;
+    padding: 10% 7% 0 7%;
     gap: 10%;
     background-color: var(--background-light);
 }
@@ -282,6 +282,7 @@
     align-items: center;
     gap: 20px;
     padding: 2% 0;
+    margin-bottom: 10%;
     border-radius: 30px;
     border: 2px solid var(--primary-color);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -321,100 +322,46 @@
 
 @media (width<900px) {
 
-    .hero-section {
-        justify-content: center;
-        padding-right: 10%;
-        padding-left: 10%;
-    }
-    
-    .hero-section .heroImg {
-        display: none;
-    }
-
-    .card {
-        height: 340px;
-    }
-
-    .card-front {
-        padding: 25px 10px;
-        font-family: var(--font-family-primary);
-    } 
-
-    .card-front img {
-        width: 50%;
-    }
-    
-    .instruments-section {
-        padding: 100px 0;
-    }
-
-    .instruments-section div { 
-        gap: 20px; 
-    }
-
-    .instruments-section img {
-        width: 80%;
-    }
-
-}
-
-@media (width<700px) {
-
-    .hero-section {
+    .hero__content {
         height: auto;
-        padding-top: 150px;
-    }
-
-    .instruments-section div { 
-        flex-direction: column; 
+        padding: 20% 5%;
     }
 
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 788px) {
 
-    .hero-section {
-        padding-top: 200px;
-    }
-
-    .hero-section h1 {    
-        font-family: var(--font-family-primary);    
-        color: var(--text-color);   
+    .hero__content h1 {
         font-size: var(--h2-size);
     }
 
-    .hero-section a {
+    .hero__content p {
         font-size: var(--paragraf-size);
-        padding: 1rem 1.2rem;
+    }
+    
+    .hero__content a {
+        font-size: var(--h5-size);
     }
 
-    .musicians-section {    
-        padding: 150px 30px; 
-        gap: 70px;
-    }
-
-    .card-container {
+    .home-instruments__list {
         flex-direction: column;
-        align-items: center;
-        gap: 50px;
     }
 
-    .card-front img {
-        width: 50%;
-    }
-
-    .instruments-section {
-        padding: 50px 0;
-        gap: 10px;
-    }
-
-    .instruments-section h1 {   
+    .home-instruments h1 {   
         font-size: var(--h2-size);
     }
     
-    .instruments-section  div{
+    .home-instruments p {
+        font-size: var(--h4-size);
+    }
+
+    .home-instruments__list {
         gap: 10px;
-        padding: 0;
+        padding: 20% 5%;
+    }
+
+    .home-instruments__list article {
+        padding: 10% 0;
     }
 
 }
