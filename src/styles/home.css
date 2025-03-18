@@ -85,7 +85,7 @@
     top: 0px;
     left: -20%; 
     z-index: -1;
-    animation: partyLeft 3s ease 2.5s infinite reverse, showLights 1s ease 2.5s both; /*  */
+    animation: partyLeft 3s ease 2.5s infinite reverse, showLights 1s ease 2.5s both; /* */
 }
 
 .light::before {
@@ -95,7 +95,8 @@
     transition: 0.5s;
     transform: rotate(-31deg);
     pointer-events: none;
-    background-image: url('/src/assets/stageLamp.png'); /* Añadir la imagen de la lámpara */
+    background-image: url('/Toquen-el-Dom.-Music-School/assets/stageLamp.png'); /* */
+     /* background-image: url('/src/assets/stageLamp.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
