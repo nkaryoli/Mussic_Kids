@@ -50,7 +50,7 @@ canvas {
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: -1; /* Para que esté en el fondo */
+    z-index: -1;
 }
 
 .static-note {
@@ -93,6 +93,13 @@ body{
     margin: 0;
     background-color: var(--background-color);
     position: relative;
+    overflow-x: hidden;
+    text-align: center;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .hero {

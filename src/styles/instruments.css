@@ -1,90 +1,39 @@
-/** {
-    border: 1px solid red;
-}*/
+/* =============== Hero Instruments ================== */
 
-
-/* =============== Instruments ================== */
-
-.instrument-hero {
+.hero--instruments {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline: 7%;
-    gap: 5%;
-}
-
-
-.instrument-hero__content {
-    width: 100%;
-    height: 80vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
+    overflow: hidden;
+    padding: 10% 7%;
+    gap: 50px;
 }
 
-.instrument-hero__content h1 {
-    color: transparent;
-    background: linear-gradient(
-        to bottom right,
-        var(--primary-color),
-        var(--accent-color)
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        font-family: var(--font-family-primary);
-        font-size: var(--h1-size);
-        animation: moveRight 0.6s ease-out both;/*  */
-    }
-    
-    .instrument-hero__content p {
-        color: var(--text-color);
-        font-family: var(--font-family-secondary);
-        font-size: var(--h3-size);
-        max-width: 800px;
-        animation: moveUp 0.6s ease-out 0.5s both;/*  */
-    }
+.hero--instruments h1 {
+    font-size: var(--h1-size);
+    animation: moveRight 0.6s ease-out both;/*  */
+}
 
-    .instrument-hero__content span {
-        color: transparent;
-        background: linear-gradient(
-            to bottom right,
-            var(--primary-color),
-        var(--accent-color),
-        var(--secondary-color),
-        var(--tertiary-color),
-        var(--queternary-color)
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        font-family: var(--font-family-primary);
-        font-weight: bold;
+.hero--instruments p {
+    color: var(--text-color);
+    font-family: var(--font-family-primary);
     font-size: var(--h2-size);
-    animation: appear 1s ease-in-out 0.8s both, pulse 3s cubic-bezier(0.4, 0, 0.2, 1) 1s infinite;/*  */
+    animation: moveUp 0.6s ease-out 0.5s both;/*  */
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 5px rgba(30, 205, 255, 0.5));
-    }
-    50% {
-        transform: scale(1.2);
-        filter: drop-shadow(0 0 30px rgba(30, 205, 255, 1));
-        
-    }
-    100% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 5px rgba(30, 205, 255, 0.5));
-    }
+.hero--instruments a {
+    font-size: var(--h2-size);
+    cursor: pointer;
+    animation: appear 1s ease-in-out 0.8s both, pulse 3s cubic-bezier(0.4, 0, 0.2, 1) 1s infinite;
+    z-index: 1;
 }
+
 
 /* ================ Instruments Seccion ============== */
 
-.instruments-Container {
+.instruments {
     padding: 10% 0;
     display: flex;
     flex-direction: column;
@@ -94,7 +43,7 @@
     gap: 100px;
 }
 
-.instruments-Container h2 {
+.instruments h2 {
     font-family: var(--font-family-tertiary);
     color: var(--text-color);
     font-size: var(--h1-size);
@@ -171,37 +120,6 @@
     box-shadow: 0px 0px 20px var(--accent-color);
     transform: scale(1.1);
     animation-play-state: paused;
-}
-
-@keyframes shakeScale {
-    0% { 
-        transform: scale(1);
-        filter: drop-shadow(0 0 10px rgba(30, 205, 255, 0.5));
-    }
-    25% { 
-        transform: scale(1.1);
-        filter: drop-shadow(0 0 20px rgba(30, 205, 255, 0.8));
-    } 
-    30% { 
-        transform: scale(1.2) translateX(-5px) rotate(-2deg);
-        filter: drop-shadow(0 0 25px rgba(30, 205, 255, 1));
-    }
-    35% { 
-        transform: scale(1.3) translateX(5px) rotate(2deg);
-        filter: drop-shadow(0 0 30px rgba(30, 205, 255, 1));
-    }
-    40% { 
-        transform: scale(1.4) translateX(-5px) rotate(-2deg);
-        filter: drop-shadow(0 0 35px rgba(30, 205, 255, 1));
-    }
-    50% { 
-        transform: scale(1.5) translateX(5px) rotate(2deg);
-        filter: drop-shadow(0 0 40px rgba(30, 205, 255, 1));
-    }
-    100% { 
-        transform: scale(1);
-        filter: drop-shadow(0 0 10px rgba(30, 205, 255, 0.5));
-    }
 }
 
 /* Posiciones de los iconos */
@@ -366,7 +284,7 @@
 }
 
 /*============ Respponsive ========== */
-
+/*
 @media (width<900px) {
     
     .instrument-hero {
@@ -397,7 +315,7 @@
         height: 50px;
     }
 
-    /*icons mobile */
+    icons mobile
     
     .icon[data-tooltip] {
         display: none;
@@ -461,4 +379,4 @@
         transform: translateY(0) scale(1);
     }
 
-}
+}*/
