@@ -8,6 +8,7 @@
     --accent-color: #FF4081;
     --text-color: #f5f5f5;
     --background-color: #121212;
+    --background-light: #2929294a;
     --font-family-primary: 'Baloo 2', sans-serif;
     --font-family-secondary: 'Fredoka', sans-serif;
     --font-family-tertiary: 'Quicksand', sans-serif;
@@ -20,19 +21,8 @@
     --paragraf-size: 1.1rem;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-body{
-    padding: 0;
-    margin: 0;
-    background-color: var(--background-color);
-    position: relative;
-}
-
+/* =============== Canvas mouse effect ================= */
 canvas {
     top: 0;
     left: 0;
@@ -41,8 +31,9 @@ canvas {
     background:none;
     position: fixed;
 }
+/* ===================================================== */
 
-/* ========== Background Notes ================= */
+/* ========== Background static notes ================= */
 
 .fixed-notes {
     position: fixed;
@@ -58,8 +49,43 @@ canvas {
     position: absolute;
     opacity: 0.2;
 }
+/* ===================================================== */
+
+/* ========== Background Animated notes ================= */
+
+.background-notes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.music-note {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    animation: floatNote 10s ease-in infinite;
+}
+/* ===================================================== */
 
 /* ============== Gobal styles =================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+    position: relative;
+}
 
 .hero {
     height: 80vh;
@@ -105,6 +131,48 @@ canvas {
     );
     background-clip: text;
     -webkit-background-clip: text;
-    font-weight: bold;
     font-family: var(--font-family-secondary);
+}
+
+.bg--gradiennt-circle {
+    background-image: radial-gradient(
+        circle at center,
+        rgba(50, 205, 50, 0.7),
+        rgba(50, 205, 50, 0.4),
+        rgba(50, 205, 50, 0.2),
+        rgba(50, 205, 50, 0.1),
+        rgba(255, 215, 0, 0),
+        rgba(255, 215, 0, 0),
+        rgba(255, 215, 0, 0)
+        );
+    border-radius: 100%;
+    padding: 10%;
+}
+
+.btn--play {
+    color: var(--text-color);
+    font-family: var(--font-family-primary);
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    font-size: var(--h5-size);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 15px 25px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: shakeScale 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    z-index: 100;
+}
+
+.btn--play i {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn--play:hover i {
+    transform: rotate(360deg);
 }

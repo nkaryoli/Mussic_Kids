@@ -221,6 +221,7 @@
 
 .hero__content h1{
     font-size: var(--h1-size);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     animation: moveRight 0.6s ease-out both;
 }
 
@@ -232,363 +233,76 @@
     animation: moveUp 0.6s ease-out 0.5s both;
 }
 
-.hero__content span {
-    font-size: var(--h2-size);
-    animation: appear 1s ease-in-out 0.8s both, pulse 3s cubic-bezier(0.4, 0, 0.2, 1) 1s infinite;/*  */
-}
-
-/* .hero-section { 
-    height: 80vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 5%;
-    padding-left: 8%; 
-} 
-
-
-.hero-section .heroText {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.hero-section h1 {    
-    font-family: var(--font-family-primary);    
-    color: var(--text-color);   
-    font-size: var(--h1-size);
-    text-align: center;
-    background: none;
-    transform: translateX(-500px);
-    animation: moveRight 1.5s ease-out forwards;
-    animation-delay: 0s; 
-    
-}
-
-.hero-section h1 span {
-    color: transparent;
-    background: linear-gradient(
-        to bottom right,
-        var(--primary-color),
-        var(--accent-color),
-        var(--secondary-color),
-        var(--tertiary-color),
-        var(--queternary-color)
-        );
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.hero-section p {
-    max-width: 550px;
-    font-family: var(--font-family-primary);    
-    color: var(--text-color);   
-    font-size: var(--h3-size);
-    text-align: center;
-    opacity: 0;
-    transform: translatex(-500px);
-    animation: moveRight 1.5s ease-out forwards;
-    animation-delay: 0.5s; 
-}
-
-.hero-section a {    
-    font-family: var(--font-family-tertiary);  
-    font-size: var(--h4-size);
-    background-color: var(--tertiary-color);
-    color: var(--text-color);
+.hero__content a {
     text-decoration: none;
+    font-size: var(--h2-size);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     font-weight: bold;
-    padding: 1.1rem 3rem;
-    border-radius: 40px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.4s ease, transform 0.3s ease;
+    animation: appear 1s ease-in-out 0.8s both, pulse 3s cubic-bezier(0.4, 0, 0.2, 1) 1s infinite;/*  */
     z-index: 100;
-    opacity: 0;
-    transform: translateY(40px);
-    animation: moveUp 1.5s ease-out forwards;
-    animation-delay: 1s;
-}
-
-.hero-section a:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-5px);
-}
-
-@keyframes moveUp {
-    0% {
-        transform: translateY(80px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes moveRight {
-    0% {
-        transform: translateX(-500px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.hero-section .heroImg {
-    max-width: 50%;
-    padding: 100px;
-    background-image: radial-gradient(
-        circle at center,
-        rgba(50, 205, 50, 0.8),
-        rgba(50, 205, 50, 0.5),
-        rgba(50, 205, 50, 0.2),
-        rgba(50, 205, 50, 0.1),
-        rgba(255, 215, 0, 0),
-        rgba(255, 215, 0, 0),
-        rgba(255, 215, 0, 0)
-    );
-    border-radius: 100%;
-    will-change: transform, opacity;
-    animation: appear 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.hero-section img {
-    max-width: 500px;
-    display: flex;
-    justify-self: center;
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-*/
-
-/* ===================== Musicians Section ===================== */
-
-.musicians-section {    
-    width: 100%; 
-    display: flex;  
-    flex-direction: column;    
-    justify-content: center;
-    align-items: center;
-    padding: 200px 50px; 
-    gap: 100px;
-}
-
-.musicians-section h1 {
-    color: var(--primary-color);
-    font-family: var(--font-family-primary); 
-    font-size: var(--h1-size);
-    margin: 0;
-    text-align: center;
-}
-
-.card-container {
-    width: 100%;
-    gap: 5%;
-    display: flex;  
-    justify-content: center;
-    align-content: space-between;
-}
-
-/* Contenedor de la tarjeta */
-.card {
-    width: 300px;
-    height: 380px;
-    perspective: 1000px; /* Profundidad para el efecto 3D */
-    z-index: 100;
-}
-
-.card p {
-    text-align: center;
-}
-/* Estructura interna de la tarjeta */
-.card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.6s ease-in-out;
-    transform-style: preserve-3d;
-}
-
-/* Lados de la tarjeta */
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: var(--text-color);
-    backface-visibility: hidden; /* Oculta el lado trasero al girar */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    gap: 20px;
-    border: 5px solid var(--secondary-color);
-    border-radius: 18px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-}
-
-  /* Estilos de cada lado */
-.card-front {
-    padding: 40px;
-    font-family: var(--font-family-primary);
-}
-
-.card-front img {
-    width: 100%;
-    border-radius: 50%;
-}
-
-.card-back {
-    text-align: center;
-    font-family: var(--font-family-tertiary);
-    background-color: var(--secondary-color);
-    transform: rotateY(180deg); /* Inicialmente volteado */
-}
-
-/* Efecto hover */
-.card:hover .card-inner {
-    transform: rotateY(180deg);
 }
 
 /* ===================== Instruments Section ===================== */
 
-.instruments-section {
+.home-instruments {
     width: 100%; 
     display: flex;  
     flex-direction: column;    
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
-    gap: 40px;
+    text-align: center;
+    padding: 7%;
+    gap: 10%;
+    background-color: var(--background-light);
 }
 
-.instruments-section h1 {
-    color: var(--primary-color);
-    font-family: var(--font-family-primary); 
+.home-instruments h1 {
+    font-family: var(--font-family-primary);
     font-size: var(--h1-size);
-    text-align: center;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.instruments-section p {
-    color: var(--secondary-color);
-    font-family: var(--font-family-primary); 
+.home-instruments p {
     font-size: var(--h2-size);
-    text-align: center;
+    text-shadow: 2px 2px 4px rgba(50, 205, 50, 0.4);
 }
 
-.instruments-section div {
+.home-instruments__list {
     width: 100%;
-    gap: 50px; 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    padding: 50px 0; 
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 0;
+    gap: 10%;
 }
 
-.instruments-section div article {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: space-evenly; 
-    width: 100%; 
-    height: auto; 
-    padding: 50px 0;
-    gap: 50px;
+.home-instruments__list article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 2% 0;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     z-index: 100;
-    background: none;
 }
 
-.instruments-section h3 {
+.home-instruments__list h3 {
     color: var(--text-color);
     font-family: var(--font-family-primary); 
     font-size: var(--h2-size);
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.8);
     margin: 0;
 }
 
-.instruments-section img {
+.home-instruments__list img {
     width: 50%;
-    border-radius: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.instruments-section article:hover img {
+.home-instruments__list article:hover{
     transform: scale(1.1);
     box-shadow: 0px 0px 20px var(--primary-color);
-}
-
-.instruments-section a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    padding: 15px 40px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: var(--text-color);
-    font-family: var(--font-family-primary);
-    font-weight: bold;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 100;
-}
-
-.instruments-section a i {
-    margin-right: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.instruments-section a:hover {
-    box-shadow: 0px 0px 20px var(--accent-color);
-    transform: scale(1.1);
-}
-
-.instruments-section div article a:hover i {
-    transform: rotate(360deg);
-}
-
-.instruments-section div article a i:active {
-    transform: scale(1);
-}
-
-/* Contenedor de las notas */
-.background-notes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Para que no interfiera con los clics */
-    overflow: hidden;
-    z-index: -1;
-}
-
-/* Estilos base para las notas */
-.music-note {
-    position: absolute;
-    font-size: 1.5rem;
-    opacity: 0.5;
-    animation: floatNote 10s ease-in infinite;
 }
 
 /* Animación de flotación */
