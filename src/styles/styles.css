@@ -38,6 +38,7 @@ canvas {
     height: 100vh;
     background:none;
     position: fixed;
+    pointer-events: none;
 }
 /* ===================================================== */
 
@@ -80,7 +81,18 @@ canvas {
 }
 /* ===================================================== */
 
-/* ============== Gobal styles =================== */
+/* ======== Floating notes for instruments play ======== */
+.floatNote {
+    z-index: 100;
+    position: absolute;
+    font-size: 34px;
+    color: var(--primary-color);
+    animation: floatUp 1.5s ease-out forwards;
+    pointer-events: none; /* Evita que interfiera con los clics */
+}
+/* ===================================================== */
+
+/* ================== Gobal styles ===================== */
 
 * {
     box-sizing: border-box;

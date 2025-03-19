@@ -6,7 +6,6 @@
     align-items: center;
     padding:  4% 0 10% 0;
     height: auto;
-    background-color: var(--background-light);
     overflow: hidden;
 }
 
@@ -14,6 +13,7 @@
     font-family: var(--font-family-primary);
     font-size: var(--h1-size);
     margin-bottom: 50px;
+    animation:moveUp 1s ease both;
 }
 
 .piano {
@@ -21,6 +21,7 @@
     padding: 80px 60px 0 60px;
     border-radius: 32px;
     background-image: linear-gradient(to bottom right, var(--primary-color), var(--accent-color), var(--secondary-color), #5BFF5B );
+    animation: appear 2s ease both;
 }
 
 .piano__set {
@@ -63,7 +64,6 @@
 .piano__key--white {
     height: 100%;
     width: 55px;
-    z-index: 1;
     border-left: 1px solid #bbb;
     border-bottom: 1px solid #bbb;
     border-radius: 0 0 8px 8px;
@@ -110,47 +110,39 @@
     border-radius: 0 20px 20px 8px;
 }
 
-.hero--piano_btn {
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    width: 400px;
-    padding: 16px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 4px 4px 0 rgba(255, 153, 51, 0.50);
-    font-family: var(--font-family-tertiary);
-    z-index: 100;
-    margin: 100px;
-}
+/* =================  Piano guide ====================*/
 
 .piano--guide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 200px 7%;
+    padding: 200px 0 200px 7%;
 }
 
 .piano--instructions{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    gap: 7%;
 }
 
 .piano--instructions__img {
-    max-width: 500px;
+    width: 500px;
+    height: fit-content;
     border-radius: 24px;
 }
 
 .piano--instructions div {
-    max-width: 500px;
+    max-width: 500%;
+    background-color: var(--background-light);
+    padding: 7%;
 }
 
 .piano--instructions__title {
     font-family: var(--font-family-primary);
-    color: var(--primary-color);
-    font-size: var(--h2-size);
+    font-size: var(--h1-size);
     margin-bottom: 50px;
 }
 
@@ -159,65 +151,27 @@
     color: var(--text-color);
     font-size: var(--paragraf-size);
     text-align: start;
+    margin-bottom: 10px;
 }
 
-.piano--tutorial {
-    padding: 100px 0;
+.piano--btn {
     width: 100%;
-    z-index: 1;
+    display: flex;
+    justify-content: start;
 }
 
-.piano--tutorial__title {
-    font-size: var(--h2-size);
-    margin: 50px 0;
-}
-
-.piano--tutorial__video {
-    width: 50%;
-    height: 500px;
-}
-
-.floatNote {
-    z-index: 100;
-    position: absolute;
-    font-size: 24px;
+.piano--btn a {
     color: var(--primary-color);
-    animation: floatUp 1.5s ease-out forwards;
-    pointer-events: none; /* Evita que interfiera con los clics */
+    font-family: var(--font-family-tertiary);
+    font-size: var(--h5-size);
+    font-weight: bold;
+    width: 400px;
+    padding: 16px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
 }
 
-@keyframes floatUp {
-    0% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-50px) scale(2.5);
-    }
-}
-
-
-@media screen and (max-width: 800px) {
-
-    .set {
-        display: none;
-    }
-    .set-mobile {
-        display: flex;
-        height: 18.875em;
-        width: 34em;
-        margin: 2em auto;
-        padding: 3em 0 0 3em;
-        position: relative;
-        border: 1px solid #160801;
-        border-radius: 1em;
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset, 0 1px rgba(212, 152, 125, 0.2) inset, 0 5px 15px rgba(0, 0, 0, 0.5);
-        background-image: linear-gradient(var(--primary-color), var(--accent-color), var(--secondary-color), #5BFF5B )
-    }
-
-    .tutorial-div {
-        width: 90%;
-    }
-
+.piano--btn i {
+    margin-right: 10px;
 }
