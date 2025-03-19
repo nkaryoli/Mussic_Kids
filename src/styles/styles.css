@@ -133,6 +133,7 @@ html {
     -webkit-background-clip: text;
     font-family: var(--font-family-primary);
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .text--gradient-rainbow {
@@ -148,6 +149,7 @@ html {
     background-clip: text;
     -webkit-background-clip: text;
     font-family: var(--font-family-secondary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .bg--gradiennt-circle {
