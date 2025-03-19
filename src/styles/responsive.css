@@ -104,35 +104,6 @@
     }
 
     /* === Piano page === */
-
-    .piano--guide {
-        padding: 100px 7%;
-    }
-
-    .piano--instructions {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-    }
-
-    .piano--instructions__img {
-        width: 60%;
-    }
-
-    .piano--instructions div {
-        max-width: 100%;
-    }
-
-    .piano--instructions__title {
-        font-size: var(--h3-size);
-        margin-bottom: 50px;
-    }
-
-    .piano--btn a {
-        margin-top: 50px;
-        font-size: var(--paragraf-size);
-    }
-
     
     .piano {
         height: 250px;
@@ -155,6 +126,35 @@
     .a, .g, .f, .d, .c {
         margin: 0 0 0 -11px;
     }
+
+    .instrument--guide {
+        padding: 100px 0 100px 0;
+    }
+
+    .instructions {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .instructions__img {
+        width: 60%;
+    }
+
+    .instructions div {
+        width: 100%;
+    }
+
+    .instructions__title {
+        font-size: var(--h3-size);
+        margin-bottom: 50px;
+    }
+
+    .piano--btn a {
+        margin-top: 50px;
+        font-size: var(--paragraf-size);
+    }
+
 
     #mobile-play {
         display: none;
