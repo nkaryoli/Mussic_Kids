@@ -278,26 +278,4 @@ iframe {
 
 .rotate_screen {
     display: none;
-}
-
-@media (width<800px) and (orientation: portrait) {
-
-    .rotate_screen {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.9);
-        z-index: 90;
-        color: var(--text-color);
-        font-size: var(--h1-size);
-        font-family: var(--font-family-primary);
-    }
-
-}
+} 

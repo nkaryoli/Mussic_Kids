@@ -1,7 +1,7 @@
 
 /* =========================== Resppnsive Design ============================ */
 
-@media (width<900px) {
+@media (width<920px) {
 
     .hero__content {
         height: auto;
@@ -9,27 +9,27 @@
     }
 
     /* === instruments page === */
-    
+
     .hero--instruments {
         padding-top: 200px;
     }
-    
+
     .hero--instruments h1 {
         font-size: var(--h2-size);
     }
-    
+
     .hero--instruments p {
         font-size: var(--h5-size);
     }
-    
+
     .hero--instruments span {
         font-size: var(--h5-size);
     }
-    
+
     .icon[data-tooltip] {
         display: none;
     }
-    
+
     .instruments {
         padding: 15% 0;
         display: flex;
@@ -44,7 +44,7 @@
         font-size: var(--h3-size);
         padding-top: 40px;
     }
-    
+
     .instrumentsBox {
         flex-direction: row;
         position: relative;
@@ -56,7 +56,7 @@
         padding: 7px;
         animation-play-state: paused;
     }
-    
+
     .icons-container {
         position: absolute;
         height: 100%;
@@ -66,11 +66,11 @@
         flex-direction: column;
         gap: 50px;
     }
-    
+
     .icon-box {
         position: relative;
     }
-    
+
     input[type="radio"] {
         display: none;
     }
@@ -92,8 +92,8 @@
         transition: opacity 0.3s ease, transform 0.3s ease, scale 0.3s ease;
         transform: translateY(10px) scale(0.9);
     }
-    
-    #toggle1:checked + #infoSpan1, 
+
+    #toggle1:checked + #infoSpan1,
     #toggle2:checked + #infoSpan2,
     #toggle3:checked + #infoSpan3,
     #toggle4:checked + #infoSpan4,
@@ -103,6 +103,62 @@
         transform: translateY(0) scale(1);
     }
 
+    /* === Piano page === */
+
+    .piano--guide {
+        padding: 100px 7%;
+    }
+
+    .piano--instructions {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .piano--instructions__img {
+        width: 60%;
+    }
+
+    .piano--instructions div {
+        max-width: 100%;
+    }
+
+    .piano--instructions__title {
+        font-size: var(--h3-size);
+        margin-bottom: 50px;
+    }
+
+    .piano--btn a {
+        margin-top: 50px;
+        font-size: var(--paragraf-size);
+    }
+
+    
+    .piano {
+        height: 250px;
+        padding: 60px 40px 0 40px;
+    }
+
+    .piano__key--white {
+        width: 45px;
+    }
+
+    .piano__key--black {
+        height: 130px;
+        width: 28px;
+    }
+
+    .piano__key--black:active {
+        height: 131px;
+    }
+
+    .a, .g, .f, .d, .c {
+        margin: 0 0 0 -11px;
+    }
+
+    #mobile-play {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -115,20 +171,22 @@
     .hero__content p {
         font-size: var(--paragraf-size);
     }
-    
+
     .hero__content a {
         font-size: var(--h5-size);
     }
+
+    /* === Instruments page === */
 
     .home-instruments__list {
         flex-direction: column;
     }
 
-    .home-instruments h1 {   
+    .home-instruments h1 {
         font-size: var(--h2-size);
         line-height: 1.3;
     }
-    
+
     .home-instruments p {
         font-size: var(--h4-size);
     }
@@ -140,6 +198,28 @@
 
     .home-instruments__list article {
         padding: 10% 0;
+    }
+
+}
+
+@media (width<768px) and (orientation: portrait) {
+
+    .rotate_screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 90;
+        color: var(--text-color);
+        font-size: var(--h1-size);
+        font-family: var(--font-family-primary);
     }
 
 }
