@@ -4,9 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:  4% 7%;
+    padding:  4% 0 10% 0;
     height: auto;
     background-color: var(--background-light);
+    overflow: hidden;
 }
 
 .hero--piano h1 {
@@ -109,25 +110,7 @@
     border-radius: 0 20px 20px 8px;
 }
 
-.img-tutorial-piano, .video-tutorial {
-    width: 40%;
-    height: auto;
-    border-radius: 20px;
-    border: var(--primary-color) 10px solid;
-}
-
-.tutorial-section {
-    display: flex;
-    flex-direction: column;
-    margin: 50px auto;
-    gap: 50px;
-    justify-content: space-around;
-    height: 15%;
-    justify-content: center;
-    align-items: center;
-}
-
-.tutorial-section a {
+.hero--piano_btn {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     width: 400px;
@@ -138,19 +121,60 @@
     box-shadow: 0 4px 4px 0 rgba(255, 153, 51, 0.50);
     font-family: var(--font-family-tertiary);
     z-index: 100;
+    margin: 100px;
 }
 
-.tutorial-div {
+.piano--guide {
     display: flex;
-    flex-direction: row;
-    width: 50%;
-    gap: 50px;
-    justify-content: space-evenly;
-    margin: 2%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 7%;
 }
 
-.tutorial-div iframe {
-    z-index: 100;
+.piano--instructions{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.piano--instructions__img {
+    max-width: 500px;
+    border-radius: 24px;
+}
+
+.piano--instructions div {
+    max-width: 500px;
+}
+
+.piano--instructions__title {
+    font-family: var(--font-family-primary);
+    color: var(--primary-color);
+    font-size: var(--h2-size);
+    margin-bottom: 50px;
+}
+
+.piano--instructions__description {
+    font-family: var(--font-family-tertiary);
+    color: var(--text-color);
+    font-size: var(--paragraf-size);
+    text-align: start;
+}
+
+.piano--tutorial {
+    padding: 100px 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.piano--tutorial__title {
+    font-size: var(--h2-size);
+    margin: 50px 0;
+}
+
+.piano--tutorial__video {
+    width: 50%;
+    height: 500px;
 }
 
 @media screen and (max-width: 800px) {
