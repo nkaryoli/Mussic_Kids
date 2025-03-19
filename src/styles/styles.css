@@ -198,13 +198,28 @@ html {
     z-index: 100;
 }
 
-.btn--play i {
+.btn--play i, .btn--back-to-instruments i {
     margin-right: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
 .btn--play:hover i {
     transform: rotate(360deg);
+}
+
+.btn--back-to-instruments {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.btn--back-to-instruments a {
+    color: var(--primary-color);
+    font-family: var(--font-family-tertiary);
+    font-size: var(--h5-size);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 }
 
 @media (width<900px) {

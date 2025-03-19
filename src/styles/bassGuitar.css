@@ -1,74 +1,75 @@
 /* el fratboard es la caja o contenedor de las cuerdas. seria el mastil del bajo */
-@import "./styles.css";
-@import "./header.css";
-@import "./footer.css";
 
-.fretboard {
+.hero--bass__title {
+    font-family: var(--font-family-primary);
+    font-size: var(--h1-size);
+}
+
+.bassGuitar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset, 0 1px rgba(212, 152, 125, 0.2) inset, 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom right, var(--primary-color), var(--accent-color), var(--secondary-color),var(--tertiary-color), var(--queternary-color));
+}
+
+.bassGuitar__fretboard {
     display: flex;
     flex-direction: column;
     background-color: var(--text-color);
-    width: 80%;
+    width: 100%;
     height: 180px;
     box-shadow: 0px 3px 5px #878787;
     z-index: 1;
 }
 
+.string-wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.string-wrap:active span{
+    animation: example 0.1s ease-in-out infinite;
+}
+
 .string {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 22px;
+    background: linear-gradient(#eee, #727272);
+    box-shadow: 0px 3px 10px #806233;
+    z-index: 20;
+}
+
+.string-notes {
     width: 100%;
     height: 100%;
     display: flex;
     position: relative;
 }
 
-/* :before seria un pseudoelemento hijo del div string (contenedor de la cuerda). y lo que hace es pintar la cuerda dentro de su contenedor */
-
-.SOL:before {
-    content: "";
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(#eee, #727272);
-    box-shadow: 0px 3px 10px #806233;
-    z-index: 2;
-    position: absolute;
-    top: 42px;
+.string-notes__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    font-family: var(--font-family-tertiary);
+    font-size: var(--h5-size);
+    color: var(--text-color);
+    font-weight: bold;
+    width: 40px;
 }
 
-.RE:before {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(#eee, #727272);
-    box-shadow: 0px 3px 10px #806233;
-    z-index: 2;
-    position: absolute;
-    top: 42px;
-}
+/* 22 frets (lineas verticales)*/
 
-.LA:before {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(#eee, #727272);
-    box-shadow: 0px 3px 10px #806233;
-    z-index: 2;
-    position: absolute;
-    top: 42px;
-}
-
-.MI:before {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(#eee, #727272);
-    box-shadow: 0px 3px 10px #806233;
-    z-index: 2;
-    position: absolute;
-    top: 42px;
-}
-
-/* dando estilos a cada contenedor de notas. 22 contenedores a lo largo de cada cuerda. lineas verticales*/
-
-.note-fret {
+.string-notes__fret {
     display: flex;
     flex: 1;
     border-right: 4px solid;
@@ -78,18 +79,18 @@
     position: relative;
 }
 
-/* el first child seria el primer fret de todas las cuerdas(strings) entre el mastil y la pala de clavijas*/
+/* primer fret en el mastil */
 
-.note-fret:first-child {
-    background: var(--background-color);
-    min-width: 30px;
+.string-notes__fret:first-child {
+    background: black;
+    min-width: 75px;
     border-right: 12px solid;
     flex-grow: 0;
     flex-shrink: 0;
     border-image: linear-gradient(to left, #bbb, #fff, #bbb) 1 100%;
 }
 
-/* :after y ::before serian pseudoelementos hijos de cada div note (contenedor de las notas). y lo que hace es pintar el marcador de nota dentro de su contenedor.*/
+/* marcador de nota dentro de su contenedor.*/
 
 .fretMark:after {
     content: "";
@@ -98,7 +99,7 @@
     width: 10px;
     border-radius: 50%;
     background-color: var(--background-color);
-    top: 80px;
+    top: 90px;
     transform: translate(0, -50%)
 }
 
@@ -109,7 +110,7 @@
     width: 10px;
     border-radius: 50%;
     background-color: var(--background-color);
-    top: 160px;
+    top: 135px;
     transform: translate(-50%, -50%)
 }
 
@@ -120,57 +121,8 @@
     width: 10px;
     border-radius: 50%;
     background-color: var(--background-color);
-    top: 20px;
+    top: 45px;
     transform: translate(-50%, -50%);
-}
-
-/* dano estilos a los nombres de cada nota segun su cuerda*/
-
-.note-name {
-    width: 30px;
-    text-align: center;
-    font-weight: 700;
-    font-family: var(--h3-size);
-    color: var(--text-color);
-    margin-top: 10px;
-}
-
-.box-color-note {
-    display: flex;
-    justify-content: center;
-    background-color: var(--accent-color)
-}
-
-/* animacion de las cuerdas al dar click */
-
-.string:active {
-    animation-name: example;
-    animation-duration: 0.1s;
-    animation-iteration-count: infinite;
-}
-
-.footer {
-    width: 100%;
-    font-family: var(--paragraf-size);
-}
-
-iframe {
-    border-style: none;
-    height: 100%;
-}
-
-.title_bass {
-    color: var(--primary-color);
-    font-family: var(--font-family-primary);
-    font-size: var(--h1-size);
-    margin: 0;
-}
-
-.bass_container {
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .img_tutorial_bass,
@@ -215,16 +167,6 @@ iframe {
     align-items: center;
 }
 
-.box_color {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15em;
-    width: 65vw;
-    border-radius: 1em;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset, 0 1px rgba(212, 152, 125, 0.2) inset, 0 5px 15px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(var(--primary-color), var(--accent-color), var(--secondary-color), #5BFF5B);
-}
 
 .instructions_bass {
     font-family: var(--font-family-tertiary);
@@ -241,13 +183,17 @@ iframe {
 @keyframes example {
 
     0% {
-        transform: rotate(-1deg);
+        transform: rotate(-1deg), translateY(0);
+        opacity: 1;
     }
-
+    50% {
+        transform: translateY(-5px);
+        opacity: 0.7;
+    }
     100% {
-        transform: rotate(1deg);
+        transform: rotate(1deg), translateY(0);
+        opacity: 1;
     }
-
 }
 
 @media (width<800px) {
