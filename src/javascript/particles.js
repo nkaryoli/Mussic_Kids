@@ -1,3 +1,5 @@
+let inactivityTimer, animationRunning = true;
+
 // Detectar si el dispositivo es móvil
 function isMobileDevice() {
     return window.innerWidth <= 834;
@@ -14,6 +16,7 @@ let canvas, ctx, particles = [], spawnTimer = 0, spawnInterval = 10;
 let gravityStrength = 10;
 let time = 0;
 let mouse = { x: 0, y: 0, out: false };
+let spawnParticles = true; // Controla si se generan partículas
 
 function startAnimation(event) {
     if (!animationStarted) {
@@ -31,13 +34,12 @@ function init(startX, startY) {
     canvas.style.left = "0";
     canvas.style.width = "100vw";
     canvas.style.height = "100vh";
-    canvas.style.pointerEvents = "none"; // Permite interacción con otros elementos
-    canvas.style.zIndex = "9999"; // Siempre visible
+    canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "9999";
     document.body.appendChild(canvas);
 
     ctx = canvas.getContext("2d");
 
-    // Ajustar tamaño del canvas al cambiar el tamaño de la ventana
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -47,41 +49,53 @@ function init(startX, startY) {
 
     mouse = { x: startX, y: startY, out: false };
 
-    // Escuchar eventos en `document` en lugar de `canvas`
     document.addEventListener("mousemove", function (e) {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
         mouse.out = false;
+        spawnParticles = true;
+        restartLoop();
+        resetInactivityTimer();
     });
 
     document.addEventListener("mouseout", function () {
         mouse.out = true;
+        stopLoop();
     });
 
     requestAnimationFrame(startLoop);
 }
 
 function newParticle() {
+    if (!spawnParticles) return;
     particles.push({
         x: mouse.x,
         y: mouse.y,
-        xv: 6 * Math.random() - 3, // Movimiento horizontal aleatorio
-        yv: 6 * Math.random() - 3, // Movimiento vertical aleatorio
-        c: `hsl(${Math.random() * 360}, 100%, 50%)`, // Color aleatorio (arcoíris)
-        s: 5 + 10 * Math.random(), // Tamaño de la partícula
-        a: 1, // Opacidad inicial
+        xv: 6 * Math.random() - 3,
+        yv: 6 * Math.random() - 3,
+        c: `hsl(${Math.random() * 360}, 100%, 50%)`,
+        s: 5 + 10 * Math.random(),
+        a: 1,
     });
 }
 
 function startLoop(newTime) {
     time = newTime;
+    animationRunning = true;
     requestAnimationFrame(loop);
 }
 
 function loop(newTime) {
+    if (!animationRunning) return;
+
     draw();
     calculate(newTime);
-    requestAnimationFrame(loop);
+
+    if (particles.length > 0) {
+        requestAnimationFrame(loop);
+    } else {
+        animationRunning = false;
+    }
 }
 
 function draw() {
@@ -99,7 +113,7 @@ function calculate(newTime) {
     let dt = newTime - time;
     time = newTime;
 
-    if (!mouse.out) {
+    if (spawnParticles) {
         spawnTimer += dt < 100 ? dt : 100;
         while (spawnTimer > 0) {
             newParticle();
@@ -107,10 +121,7 @@ function calculate(newTime) {
         }
     }
 
-    const particleOverflow = particles.length - 700;
-    if (particleOverflow > 0) {
-        particles.splice(0, particleOverflow);
-    }
+    particles = particles.filter(p => p.a > 0.05); // Elimina partículas invisibles
 
     for (let p of particles) {
         if (!mouse.out) {
@@ -125,4 +136,35 @@ function calculate(newTime) {
         p.y += p.yv;
         p.a *= 0.98;
     }
+}
+
+// Detener el loop si no hay partículas
+function stopLoop() {
+    spawnParticles = false;
+    setTimeout(() => {
+        if (particles.length === 0) {
+            animationRunning = false;
+        }
+    }, 100);
+}
+
+// Reiniciar el loop si está detenido
+function restartLoop() {
+    if (!animationRunning) {
+        animationRunning = true;
+        requestAnimationFrame(loop);
+    }
+}
+
+// Manejo de inactividad
+function resetInactivityTimer() {
+    clearTimeout(inactivityTimer);
+    inactivityTimer = setTimeout(() => {
+        spawnParticles = false; // Detener la generación de partículas
+        setTimeout(() => {
+            if (particles.length === 0) {
+                stopLoop(); // Detener la animación cuando las partículas desaparezcan
+            }
+        }, 1);
+    }, 5); // Reduzco el tiempo de inactividad a 300ms
 }
