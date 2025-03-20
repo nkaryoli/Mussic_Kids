@@ -7,7 +7,7 @@ function isMobileDevice() {
 
 onload = function () {
     if (!isMobileDevice()) {
-        document.addEventListener("mousemove", startAnimation, { once: true });
+        document.addEventListener("mousemove", initializeBubbleAnimation, { once: true });
     }
 };
 
@@ -18,14 +18,14 @@ let time = 0;
 let mouse = { x: 0, y: 0, out: false };
 let spawnParticles = true; // Controla si se generan partículas
 
-function startAnimation(event) {
+function initializeBubbleAnimation(event) {
     if (!animationStarted) {
         animationStarted = true;
-        init(event.clientX, event.clientY);
+        initCursorAnimation(event.clientX, event.clientY);
     }
 }
 
-function init(startX, startY) {
+function initCursorAnimation(startX, startY) {
     if (isMobileDevice()) return;
 
     canvas = document.createElement("canvas");
@@ -63,10 +63,10 @@ function init(startX, startY) {
         stopLoop();
     });
 
-    requestAnimationFrame(startLoop);
+    requestAnimationFrame(startBubbleLoop);
 }
 
-function newParticle() {
+function createBubble() {
     if (!spawnParticles) return;
     particles.push({
         x: mouse.x,
@@ -79,26 +79,26 @@ function newParticle() {
     });
 }
 
-function startLoop(newTime) {
+function startBubbleLoop(newTime) {
     time = newTime;
     animationRunning = true;
-    requestAnimationFrame(loop);
+    requestAnimationFrame(animateBubbles);
 }
 
-function loop(newTime) {
+function animateBubbles(newTime) {
     if (!animationRunning) return;
 
-    draw();
-    calculate(newTime);
+    drawBubbles();
+    updateBubblePositions(newTime);
 
     if (particles.length > 0) {
-        requestAnimationFrame(loop);
+        requestAnimationFrame(animateBubbles);
     } else {
         animationRunning = false;
     }
 }
 
-function draw() {
+function drawBubbles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let p of particles) {
         ctx.globalAlpha = p.a;
@@ -109,14 +109,14 @@ function draw() {
     }
 }
 
-function calculate(newTime) {
+function updateBubblePositions(newTime) {
     let dt = newTime - time;
     time = newTime;
 
     if (spawnParticles) {
         spawnTimer += dt < 100 ? dt : 100;
         while (spawnTimer > 0) {
-            newParticle();
+            createBubble();
             spawnTimer -= spawnInterval;
         }
     }
@@ -152,7 +152,7 @@ function stopLoop() {
 function restartLoop() {
     if (!animationRunning) {
         animationRunning = true;
-        requestAnimationFrame(loop);
+        requestAnimationFrame(animateBubbles);
     }
 }
 
