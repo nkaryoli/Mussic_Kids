@@ -25,7 +25,8 @@ function initializeBubbleAnimation(event) {
     }
 }
 
-function initCursorAnimation(startX, startY) {
+function initCursorAnimation
+(startX, startY) {
     if (isMobileDevice()) return;
 
     canvas = document.createElement("canvas");
