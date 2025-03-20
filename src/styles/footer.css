@@ -1,36 +1,65 @@
 footer {
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
+	align-items: center;
 	width: 100%;
-	background-color: var(--primary-color);
-	height: 200px;
-    font-weight: 600;
-    height: 200px;
-    background-color: #ff9933;
+	height: auto;
+    padding: 50px 20px;
+    background-color: #121212;
+    gap: 15px;
 }
 
-.icon_rrss {
-	display: flex;
-    justify-content: center;
-	list-style-type: none;
-    padding: 0;
-    margin: 0;
+footer a, .footer--navigation {
+    text-decoration: none;
+    padding-inline: 20px;
 }
 
-footer img {
-    height: 32px;
-    padding: 8px;
+.footer__text, .footer__text-copyright {
+    color: var(--text-color);
+    font-size: var(--paragraf-size);
+    font-family: var(--font-family-tertiary);
 }
 
-.info_footer {
-	display: flex;
-    flex-direction: column;
-    align-items: center;
+.footer__text-copyright {
+    font-size: 0.8rem;
 }
 
-footer p {
+.footer__contact {
     display: flex;
-    align-items: center;
-    margin: 0;
+    gap: 15px;
+    padding: 5px;
+}
+
+.footer__contact img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer__contact a:hover img {
+    transform: scale(1.2);
+}
+
+.footer__navigation a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-family-primary);
+    font-size: var(--h5-size);
+    position: relative;
+}
+
+.footer__navigation a:not(:last-child)::after {
+    content: "|";
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+@media (max-width: 430px) {
+    footer a, .footer--navigation {
+        padding-inline: 5px;
+    }
+    
+    .footer__navigation a {
+        font-size: 1.2rem;
+    }
 }
