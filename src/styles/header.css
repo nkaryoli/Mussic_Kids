@@ -1,24 +1,34 @@
-header div, header div img {
-    height: 100px;
-}
-
-/* Estilos generales */
 header {
     width: 100%;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 0 7%;
     background: #121212;
+    /* background-color: yellow; */
     position: fixed;
     z-index: 1000;
 }
+
+
+.logo {
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+}
+
 
 /* Menú oculto por defecto */
 nav {
     position: absolute;
     top: 120px;
     left: 0;
+    right: 0;
+    height: calc(100vh - 120px);
     width: 100%;
     background: rgba(18, 18, 18, 0.9);
     opacity: 0;
@@ -35,27 +45,33 @@ nav {
 }
 
 .navBar li {
-    margin: 10px 0;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+    width: 90%;
 }
 
 .navBar a {
     text-decoration: none;
-    color: white;
-    font-size: var(--paragraf-size);
-    padding: 10px;
+    color: var(--text-color);
+    font-size: var(--h4-size);
+    font-family: var(--font-family-primary);
+    padding: 20px 10px;
     display: block;
 }
 
-header a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--secondary-color);
-    text-decoration-thickness: 4px;
+header .navBar a:hover {
+    text-decoration: none; /* Eliminar subrayado predeterminado */
+    background-image: linear-gradient(to left, var(--primary-color), var(--accent-color), var(--tertiary-color), var(--secondary-color));
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 5px;
 }
 
 /* Icono de menú hamburguesa */
 .menu-icon {
     color: var(--text-color);
-    font-size: 30px;
+    font-size: var(--h2-size);
+    font-weight: bold;
     cursor: pointer;
     user-select: none;
     z-index: 101;
@@ -72,15 +88,15 @@ header a:hover {
     visibility: visible;
 }
 
-@media (min-width: 610px) {
+@media (width>900px) {
     
+        
     header{
         width: 100%;
         height: 120px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 100px;
         font-family: var(--font-family-primary);
         z-index: 100;
         position: relative;
@@ -91,6 +107,7 @@ header a:hover {
     }
 
     nav {
+        height: 80px;
         width: auto;
         opacity: 1;
         visibility: visible;
@@ -99,14 +116,37 @@ header a:hover {
         top: 0;
     }
 
-    .navBar a {
-        font-family: var(--font-family-primary);
-        font-size: var(--h4-size);
+    .navBar li {
+        border-bottom: none;
+        width: auto;
     }
 
+    .navBar a {
+        font-size: 1.2rem;
+    }
 
     .navBar {
         flex-direction: row;
+        gap: 5px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    header{
+        height: 140px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .navBar a {
+        font-size: var(--h4-size);
+    }
+
+    .navBar {
         gap: 20px;
     }
 

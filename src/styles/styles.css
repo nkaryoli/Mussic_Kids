@@ -121,7 +121,7 @@ html {
     align-items: center;
     padding: 4% 7%;
     gap: 5%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .hero__content {
@@ -198,7 +198,7 @@ html {
     z-index: 100;
 }
 
-.btn--play i, .btn--back-to-instruments i {
+.btn--play i, .btn--back-to-instruments i, header i {
     margin-right: 10px;
     transition: transform 0.3s ease-in-out;
 }
