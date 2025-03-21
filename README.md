@@ -32,7 +32,7 @@ This project is inspired by a web development exercise I completed during my ful
 
 ![bass guitar example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-bass-guitar.png)
 
-## Click [ 🌐 here](https://nkaryoli.github.io/Toquen-el-Dom.-Music-School/) to see the app. 
+## Click [ 🌐 here](https://nkaryoli.github.io/Mussic_Kids/) to see the app. 
 
 ## 🚀 How to Run the Project
 
