@@ -26,11 +26,11 @@ This project is inspired by a web development exercise I completed during my ful
 
 ## 📸 Screenshots
 
-![instruments section example](https://raw.githubusercontent.com/nkaryoli/Music_Kids/dev/src/assets/demo-instruments)
+![instruments section example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-instruments)
 
-![piano example](https://raw.githubusercontent.com/nkaryoli/Music_Kids/dev/src/assets/demo-piano.png)
+![piano example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-piano.png)
 
-![bass guitar example](https://raw.githubusercontent.com/nkaryoli/Music_Kids/dev/src/assetsdemo-bass-guitar.png)
+![bass guitar example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assetsdemo-bass-guitar.png)
 
 ## Click [ 🌐 here](https://nkaryoli.github.io/Toquen-el-Dom.-Music-School/index.html) to see the app. 
 
