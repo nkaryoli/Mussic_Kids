@@ -1,50 +1,65 @@
+
 header {
     width: 100%;
-    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 7%;
+    padding: 5px 7%;
     background: #121212;
-    /* background-color: yellow; */
     position: fixed;
+    border-bottom: #3b3a3a52 1px solid;
     z-index: 1000;
+    text-decoration: none;
 }
 
 
 .logo {
-    padding-top: 10px;
-    text-decoration: none;
+    border: 1px solid red;
 }
 
 .logo img {
-    height: 50px;
+    width: 300px;
+    height: auto;
 }
 
-
-/* Menú oculto por defecto */
 nav {
-    position: absolute;
-    top: 120px;
-    left: 0;
-    right: 0;
-    height: calc(100vh - 120px);
+    border: 1px solid yellow;
     width: 100%;
-    background: rgba(18, 18, 18, 0.9);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.navBar {
-    list-style: none;
-    padding: 20px 0;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-.navBar li {
+nav ul {
+    /* border: 1px solid rgb(0, 255, 255); */
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 24px;
+    color: var(--text-color);
+    font-size: var(--h5-size);
+    font-family: var(--font-family-primary);
+    transition: background-color 150ms ease;
+}
+
+nav a:hover {
+    text-decoration: none;
+    background-color: #9f9f9f20;
+}
+
+nav a.active-link {
+    background-color: #2929294a;
+}
+
+nav a.accent-link {
+    border-bottom: 2px solid var(--accent-color);
+}
+/* .navBar li {
     border-bottom: 1px solid rgba(245, 245, 245, 0.1);
     width: 90%;
 }
@@ -56,38 +71,38 @@ nav {
     font-family: var(--font-family-primary);
     padding: 20px 10px;
     display: block;
-}
+} */
 
-header .navBar a:hover {
-    text-decoration: none; /* Eliminar subrayado predeterminado */
+/*header .navBar a:hover {
+    text-decoration: none; /* Eliminar subrayado predeterminado /
     background-image: linear-gradient(to left, var(--primary-color), var(--accent-color), var(--tertiary-color), var(--secondary-color));
     background-size: 100% 5px;
     background-repeat: no-repeat;
     background-position: bottom;
     padding-bottom: 5px;
-}
+}*/
 
 /* Icono de menú hamburguesa */
-.menu-icon {
+/* .menu-icon {
     color: var(--text-color);
     font-size: var(--h2-size);
     font-weight: bold;
     cursor: pointer;
     user-select: none;
     z-index: 101;
-}
+} */
 
 /* Checkbox oculto */
-.menu-checkbox {
+/* .menu-checkbox {
     display: none;
-}
+} */
 
 /* Si el checkbox está marcado, mostramos el menú */
-.menu-checkbox:checked + .menu-icon + nav {
+/* .menu-checkbox:checked + .menu-icon + nav {
     opacity: 1;
     visibility: visible;
-}
-
+} */
+/* 
 @media (width>900px) {
     
         
@@ -150,4 +165,4 @@ header .navBar a:hover {
         gap: 20px;
     }
 
-}
+} */
