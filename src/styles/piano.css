@@ -14,7 +14,8 @@
 }
 
 .hero--piano h1 {
-    font-family: var(--font-family-primary);
+    color: var(--text-color);
+    font-family: var(--font-family-secondary);
     font-size: var(--h1-size);
     margin-bottom: 50px;
     animation:moveUp 1s ease both;
