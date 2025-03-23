@@ -203,7 +203,7 @@ main a {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: shakeScale 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    z-index: 100;
+
 }
 
 .btn--play i, .btn--back-to-instruments i, header i {

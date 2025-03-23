@@ -12,18 +12,25 @@
 
     .hero--instruments {
         padding-top: 200px;
+        align-items: center;
+    }
+
+    .hero--instruments__content {
+        width: 90%;
+        gap: 20px;
     }
 
     .hero--instruments h1 {
-        font-size: var(--h2-size);
+        color: var(--text-color);
     }
 
     .hero--instruments p {
         font-size: var(--h5-size);
     }
 
-    .hero--instruments span {
+    .hero--instruments a {
         font-size: var(--h5-size);
+        color: var(--text-color);
     }
 
     .icon[data-tooltip] {
@@ -31,7 +38,6 @@
     }
 
     .instruments {
-        padding: 15% 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -81,12 +87,12 @@
         width: 250px;
         left: 220px;
         top: -25px;
-        background-image: linear-gradient(to right, rgb(255, 215, 0, 0.7), rgb(255, 64, 129, 0.7), rgb(30, 144, 255, 0.7), rgb(50, 205, 50, 0.7));
+        background-image: linear-gradient(to right, rgb(255, 64, 129), rgb(30, 144, 255), rgb(50, 205, 50));
         color: var(--text-color);
         padding: 20px;
         border-radius: 24px;
         font-size: var(--paragraf-size);
-        font-family: var(--font-family-secondary);
+        font-family: var(--font-family-tertiary);
         font-weight: bold;
         pointer-events: none;
         transition: opacity 0.3s ease, transform 0.3s ease, scale 0.3s ease;
@@ -198,6 +204,17 @@
 
     .home-instruments__list article {
         padding: 10% 0;
+    }
+
+    /* === Instruments page === */
+
+    .hero--instruments__content {
+        gap: 10px;
+    }
+
+    .hero--instruments h1 {
+        font-size: var(--h3-size);
+        line-height: 1.1;
     }
 
     /* === aboutUs page === */
