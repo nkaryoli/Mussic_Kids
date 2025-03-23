@@ -10,7 +10,8 @@
     overflow: hidden;
     padding: 10% 7%;
     gap: 50px;
-    background-image: url('/src/assets/bg-instruments.png');
+    /* background-image: url('/src/assets/bg-instruments.png'); */
+    background-image: url('/Mussic_Kids/src/assets/bg-instruments.png');
     background-repeat: no-repeat;
     background-position: right;
 }
