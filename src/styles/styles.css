@@ -171,7 +171,6 @@ main a {
     background-clip: text;
     -webkit-background-clip: text;
     font-family: var(--font-family-secondary);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .bg--gradiennt-circle {
@@ -186,7 +185,7 @@ main a {
         rgba(255, 215, 0, 0)
         );
     border-radius: 100%;
-    padding: 10%;
+    padding: 7%;
 }
 
 .btn--play {
