@@ -1,136 +1,90 @@
-/* .main, .musicianContainer {
-    padding: 1rem 0 4rem 0;
+.hero--about-us {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.main {
-    padding-top: 200px;
-}
-
-.notas {
-    width: 17rem;
-    width: 17rem;
-}
-
-.titleAbout {
-    font-family: var(--font-family-primary);
-    font-size: var(--h1-size);
-    color: var(--primary-color);
+    justify-content: center;
     text-align: center;
-    margin: 50px;
-}
-
-.textAbout {
-    width: 54rem;
-    font-family: var(--font-family-tertiary);
-    font-size: var(--h1-size);
-    color: var(--primary-color);
-    text-align: center;
-}
-
-.textAbout {
-    width: 54rem;
-    font-family: var(--font-family-tertiary);
-    font-size: var(--paragraf-size);
-    color: white;
-    padding: 1rem 0;
-    padding: 1rem 0;
-}
-
-.musicianCard img {
-    width: 10rem;
-    border-radius: 100px;
-    margin-right: 50px;
-}
-
-.musicianCard {
-    width: 54rem;
-    margin-bottom: 5rem;
-    padding: 3rem;
-    background-image: linear-gradient(var(--primary-color), var(--accent-color),var(--secondary-color));
-    border-radius: 3rem;
-    display: flex;
-    align-items: start;
-}
-
-.musicianName {
-    font-family: var(--font-family-primary);
-    font-size: var(--h3-size);
-    color: black;
-}
-
-.textBio {
-    font-family: var(--font-family-tertiary);
-    font-size: var(--paragraf-size)
-}
-
-@media (width<700px) {
-
-    .main, .musicianContainer {
-        padding: 1.5rem;
-    }
-
-    .notas {
-        width: 10rem;
-    }
-
-    .titleAbout {
-        font-size: var(--h3-size);
-    }
-
-    .textAbout, .textBio {
-        width: 100%;
-    }
-
-    .musicianCard img {
-        width: 5rem;
-        height: 5rem;
-        margin: 0;
-        margin-bottom: 1rem;
-    }
-
-    .musicianCard {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        margin-bottom: 2rem;
-        border-radius: 2rem;
-    }
-
-    .musicianName {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media (700px < width < 1100px) {
-
-    .main, .musicianContainer {
-        padding: 1rem 3rem 3rem;
-    }
-
-    .main, .musicianContainer {
     width: 100%;
-    }
+    padding: 7%;
+    height: auto;
+    background-color: var(--background-light);
+}
 
-    .musicianCard, .textAbout {
-        width: 100%;
-    }
+.hero--about-us img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 40px;
+}
 
-    .notas {
-        width: 30%;
-    }
+.hero--about-us__text {
+    max-width: 80%;
+    color: var(--text-color);
+    font-size: var(--h5-size);
+    font-family: var(--font-family-tertiary);
+    line-height: 1.6;
+}
 
-    .musicianName {
-        font-size: 1.5rem;
-    }
+.about-us {
+    padding: 15% 7% 20% 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    .musicianCard img {
-        width: 6rem;
-        height: 6rem;
-    }
+.about-us__content {
+    max-width: 100%;
+    position: relative;
+}
 
-} */
+.about-us__content img {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-self: center;
+}
+
+.card {
+    width: 400px;
+    position: absolute;
+    background-image: radial-gradient(
+        circle at center,
+        rgba(30, 205, 255, 0.2),
+        rgba(30, 205, 255, 0.3),
+        rgba(30, 205, 255, 0.6),
+        rgba(30, 205, 255, 0.8)
+        );
+    padding: 32px;
+    border-radius: 24px;
+}
+
+.card.history { 
+    top: -100px; 
+    left: -60%; 
+}
+.card.mission {
+    top: -70px;
+    left: 95%;
+}
+.card.team {
+    top: 300px;
+    left: -70%;
+}
+.card.approach {
+    top: 80%;
+    right: -50%;
+}
+
+.card h3 {
+    font-size: var(--h2-size);
+    font-family: var(--font-family-secondary);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-color);
+    font-size: var(--paragraf-size);
+    font-family: var(--font-family-tertiary);
+    line-height: 1.6;
+}

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instruments - Music School kids</title>
-    <link rel="stylesheet" href="/Toquen-el-Dom.-Music-School/src/styles/styles.css">
+    <title>Piano - Mussic kids</title>
+    <link rel="stylesheet" href="/Mussic_Kids/src/styles/styles.css">
     <!--<link rel="stylesheet" href="/src/styles/styles.css">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,11 @@
 </head>
 
 <body>
+    <div class="fixed-notes"></div>
     <header>
         <a class="logo" href="../../index.html">
-            <img src="/Toquen-el-Dom.-Music-School/src/assets/logoKids.png" alt="Logo">
-            <!--<img src="/src/assets/logoKids.png" alt="Logo">-->
+            <img src="/Mussic_Kids/src/assets/logoKids.png" alt="logo">
+            <!--<img src="/src/assets/logoKids.png" alt="logo">-->
         </a>
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
         <label for="menu-toggle" class="menu-icon">☰</label>
@@ -100,7 +101,7 @@
     
     <section class="instrument--guide">
         <div class="instructions">
-            <img class="instructions__img" src="../assets/tutorial.jpg" alt="Inforgrafía Piano">
+            <img class="instructions__img" src="../assets/img-piano-instruction.jpg" alt="image Piano instructions">
             <div>
                 <h1 class="instructions__title text--gradient-simple">How to play</h1>
                 <ul class="instructions__list">
@@ -118,27 +119,30 @@
     </section>
 
     <footer>
-        <div class="info_footer"> 
-        <p> 
-            Monday to Friday 10h00 a 20h00 
-        </p> 
-        <p> <img src="/Toquen-el-Dom.-Music-School/src/assets/SM_email_.png" alt="imágen sobre para carta">info@onlineMusic.com</p>
-        <p> <img src="/Toquen-el-Dom.-Music-School/src/assets/SM_Whatsapp_icon.png" alt="logo de whatsapp">+34 628111222</p>        </div>
-            <ul class="icon_rrss">
-                <li><a href=""><img src="/Toquen-el-Dom.-Music-School/src/assets/SM_Fb_icon.png" alt="logo de facebook"></a></li>
-                <li><a href=""><img src="/Toquen-el-Dom.-Music-School/src/assets/SM_Instagram_icon.png" alt="logo de instagram"></a></li>
-                <li><a href=""><img src="/Toquen-el-Dom.-Music-School/src/assets/SM_X_icon.png" alt="logo de X - twitter"></a></li>
-                <li><a href=""><img src="/Toquen-el-Dom.-Music-School/src/assets/SM_youtube_icon.png" alt="logo de youtube"></a></li>
-            </ul>
+        <p class="footer__text">Developed by Karyoli Nieves</p> 
+        <div class="footer__contact">
+            <a href="mailto:karyoli.ie@gmail.com"><img src="/TMussic_Kids/src/assets/icon-email.png" alt="icon-email"></a>
+            <a href="https://github.com/nkaryoli"><img src="/Mussic_Kids/src/assets/icon-git.png" alt="icon-git"></a>
+            <a href="https://www.linkedin.com/in/karyoli-nieves/"><img src="/Mussic_Kids/src/assets/icon-linkdin.png" alt="icon-linkdin"></a>
+            <!-- <a href="mailto:karyoli.ie@gmail.com"><img src="/src/assets/icon-email.png" alt="icon-email"></a>
+            <a href="https://github.com/nkaryoli"><img src="/src/assets/icon-git.png" alt="icon-git"></a>
+            <a href="https://www.linkedin.com/in/karyoli-nieves/"><img src="/src/assets/icon-linkdin.png" alt="icon-linkdin"></a> -->
+        </div>
+        <p class="footer__text-copyright">© 2025 Music Kids. All rights reserved.</p>
+        <div class="footer__navigation">
+            <a href="../../index.html">Home</a>
+            <a href="./instruments.html">Instruments</a>
+            <a href="./aboutUs.html">About us</a>
+        </div>
     </footer>
     <canvas></canvas>
     
-    <script src="/Toquen-el-Dom.-Music-School/src/javascript/notesBg.js"></script>
-    <script src="/Toquen-el-Dom.-Music-School/src/javascript/particles.js"></script>
-    <script src="/Toquen-el-Dom.-Music-School/src/javascript/piano.js"></script>
-    <script src="/Toquen-el-Dom.-Music-School/src/javascript/pianoKeysAnimation.js"></script>
+    <script src="/Mussic_Kids/src/javascript/notesBg.js"></script>
+    <script src="/Mussic_Kids/src/javascript/cursorAnimation.js"></script>
+    <script src="/Mussic_Kids/src/javascript/piano.js"></script>
+    <script src="/Mussic_Kids/src/javascript/pianoKeysAnimation.js"></script>
     <!--<script src="/src/javascript/notesBg.js"></script>
-    <script src="/src/javascript/particles.js"></script>
+    <script src="/src/javascript/cursorAnimation.js"></script>
     <script src="/src/javascript/piano.js"></script>
     <script src="/src/javascript/pianoKeysAnimation.js"></script>-->
 </body>

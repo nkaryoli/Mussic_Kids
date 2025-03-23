@@ -1,25 +1,50 @@
-# Toquen el DOM. Music School for Kids.
+# Mussic Kids
 
-Toquen el DOM is an interactive web application designed for an online music school. It allows users to practice musical instruments virtually, playing sounds through mouse clicks or keyboard presses. The platform provides an engaging and educational experience, making music learning more accessible and interactive.
+![home page example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/img-web-example.png)
 
-## Features
+Mussic Kids is an interactive web application designed for an online music school. It allows users to practice musical instruments virtually, playing sounds through mouse clicks or keyboard presses. The platform provides an engaging and educational experience, making music learning more accessible and interactive.
 
-- Two interactive instruments (piano and bass).
+## 🎵 About the Project
+
+This project is inspired by a web development exercise I completed during my fullstack bootcamp. I have built this version from scratch, applying my knowledge in responsive design, accessibility, and web optimization. The goal of this website is to showcase a modern and engaging platform for a music school.
+
+## 🌟 Features
+
+- Responsive design for all screen sizes.
+- Interactive elements for user engagement.
+- Clean and accessible UI.
+- Sections: Home, About Us, Instruments, and Contact.
+- Two interactive instruments (Piano and Bass Guitar).
 - Realistic sound mapping corresponding to each instrument's keys or strings.
-- Three main pages: Home, Instruments, and About Us.
-- Engaging and intuitive UI/UX with a music education theme.
-- Navigation bar with persistent menu access.
 - Instruments can be played repeatedly with simultaneous sound output.
-- Visual feedback when an instrument is played (e.g., key vibration or movement effects).
+- Visual feedback when an instrument is played (movement effects and animations).
 
-## Technologies and tools Used
+## 🛠 Technologies Used
 
-- HTML, CSS, and JavaScript
-- Scrum methodology for project management
-- Responsive design for various device sizes
-- Sound and animation libraries for an enhanced user experience.
+- Frontend: HTML, CSS, JavaScript.
+- Animations: CSS and JavaScript.
 
-### Click [ 🌐 here](https://qr-code-scanner-jet.vercel.app/) to see the app. 🚀
+## 📸 Screenshots
+
+![instruments section example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-instruments.png)
+
+![piano example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-piano.png)
+
+![bass guitar example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-bass-guitar.png)
+
+## Click [ 🌐 here](https://nkaryoli.github.io/Mussic_Kids/) to see the app. 
+
+## 🚀 How to Run the Project
+
+1. Clone the repository:
+
+2. Open the index.html file in your browser.
+
+## 📩 Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+Email: karyoli.ie@gmail.com
 
 ## Contributing
 Contributions are welcome! If you have any ideas to improve the app, follow these steps:
@@ -28,13 +53,6 @@ Contributions are welcome! If you have any ideas to improve the app, follow thes
 - Make your changes and commit them (git commit -am 'Add new feature').
 - Push to the branch (git push origin feature/new-feature).
 - Open a Pull Request.
-
-## Contact
-If you have any questions or suggestions, feel free to reach out:
-
-GitHub: nkaryoli
-
-Email: karyoli.ie@gmail.com
 
 ## License
 
