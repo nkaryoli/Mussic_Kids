@@ -292,7 +292,10 @@
         position: relative;
     }
 
-    .hero--bass {
+    .hero--bass, .hero--piano{
         padding:  2% 0;
+    }
+    .hero--piano h1 {
+        margin-bottom: 0;
     }
 }
