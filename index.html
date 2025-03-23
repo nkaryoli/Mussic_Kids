@@ -20,17 +20,20 @@
     <header>
         <!-- <input type="checkbox" id="menu-toggle" class="menu-checkbox"> -->
         <!-- <label for="menu-toggle" class="menu-icon">☰</label> -->
-        <nav>
-            <a class="logo" href="./index.html">
-                <!--<img src="/Toquen-el-Dom.-Music-School/src/assets/logoKids.png" alt="Logo">-->
-                <img src="/src/assets/logo2(1).png" alt="Logo">
-            </a>
+        <a class="logo" href="./index.html">
+            <!--<img src="/Toquen-el-Dom.-Music-School/src/assets/logoKids.png" alt="Logo">-->
+            <img src="/src/assets/logo2(1).png" alt="Logo">
+        </a>
+        <button id="open-btn" onclick="openMenu()">☰</button>
+        <nav id="navbar">
             <ul>
+                <li><button id="close-btn" onclick="closeMenu()">X</button></li>
                 <li><a href="./index.html" class="active-link"><i class="fa-solid fa-house text--gradient-rainbow"></i> Home</a></li>
                 <li><a href="./src/pages/instruments.html"><i class="fa-solid fa-music text--gradient-rainbow"></i> Instruments </a></li>
                 <li><a href="./src/pages/aboutUs.html" class="accent-link"><i class="fa-solid fa-chalkboard-user text--gradient-rainbow"></i> About us</a></li>
             </ul>
         </nav>
+        <div id="overlay" onclick="closeMenu()"></div>
     </header>
 
     <main class="hero hero--home">
@@ -96,6 +99,7 @@
     <script src="/Mussic_Kids/src/javascript/cursorAnimation.js"></script>
     <!--<script src="/src/javascript/cursorAnimation.js"></script>
     <script src="/src/javascript/notesBg.js"></script>-->
+    <script src="/src/javascript/navbar.js"></script>
 </body>
 
 </html>
