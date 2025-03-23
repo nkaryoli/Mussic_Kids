@@ -7,8 +7,8 @@
     padding:  7% 0 10% 0;
     height: 100dvh;
     overflow: hidden;
-    /* background-image: url('/Mussic_Kids/src/assets/bg-piano.png'); */
-    background-image: url('/src/assets/bg-piano.png');
+    background-image: url('/Mussic_Kids/src/assets/bg-piano.png');
+    /* background-image: url('/src/assets/bg-piano.png'); */
     background-size: cover;
     background-position: bottom;
 }
