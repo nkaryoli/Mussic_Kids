@@ -4,15 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:  7% 0 10% 0;
-    height: auto;
+    padding:  10% 0;
+    height: 100dvh;
     overflow: hidden;
+    background-image: url('/src/assets/bg-bass.png');
+    background-size: cover;
 }
 
 .hero--bass__title {
-    font-family: var(--font-family-primary);
+    color: var(--text-color);
+    font-family: var(--font-family-secondary);
     font-size: var(--h1-size);
-    margin-bottom: 80px;
     animation:moveUp 1s ease both;
 }
 

@@ -285,3 +285,14 @@
     }
 
 }
+
+@media (width<768px) and (orientation: landscape) {
+    
+    header {
+        position: relative;
+    }
+
+    .hero--bass {
+        padding:  2% 0;
+    }
+}
