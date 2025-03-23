@@ -10,7 +10,7 @@
 
 :root {
     --primary-color: #FF9800;
-    --secondary-color: #1E90FF;
+    --secondary-color: rgb(30, 144, 255);
     --tertiary-color: #32CD32;
     --queternary-color: #FFD700;
     --accent-color: #FF4081;
@@ -241,7 +241,13 @@ main a {
 
 .instructions div {
     width: 65%;
-    background-color: var(--background-light);
+    background-image: radial-gradient(
+        circle at center,
+        rgba(30, 144, 255, 0.9),
+        rgba(30, 144, 255, 0.6),
+        rgba(30, 144, 255, 0.4),
+        rgba(30, 144, 255, 0.2)
+    );
     padding: 7%;
 }
 
