@@ -28,7 +28,7 @@ nav a {
     text-decoration: none;
     padding: 20px;
     color: var(--text-color);
-    font-size: var(--paragraf-size);
+    font-size: var(--h5-size);
     font-family: var(--font-family-primary);
     transition: background-color 1.5s ease;
 }
@@ -40,9 +40,6 @@ nav ul li a:hover {
 
 nav ul li a.active-link {
     background-color: #2929294a;
-}
-
-nav ul li a.accent-link {
     border-bottom: 3px solid var(--accent-color);
 }
 
@@ -106,6 +103,12 @@ nav ul li a.accent-link {
     nav li {
         width: 100%;
         text-align: start;
+    }
+
+    nav ul li a.active-link {
+        background-color: #2929294a;
+        border-bottom: none;
+        border-left: 3px solid var(--accent-color);
     }
 
     nav.show {
