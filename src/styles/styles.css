@@ -155,7 +155,6 @@ main a {
     -webkit-background-clip: text;
     font-family: var(--font-family-primary);
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .text--gradient-rainbow {

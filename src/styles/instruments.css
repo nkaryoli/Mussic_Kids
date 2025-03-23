@@ -78,7 +78,11 @@
     transform: translateY(50px) scale(0.8);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 100;
+    animation: fadeIn 1.2s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
+
 
 /* scroll animation */
 .instrumentsBox.show {
