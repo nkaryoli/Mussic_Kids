@@ -78,25 +78,26 @@
     left: -45%;
     opacity: 0;
     z-index: 1;
-    animation: partyLeft 3s ease 2s infinite, showLights 1s ease 2s both; /*  */
+    animation: partyLeft 3s ease 2s infinite, showLights 1s ease 2s both; 
 }
 
 .light.light--left-2 {
     top: 0px;
     left: -20%; 
     z-index: -1;
-    animation: partyLeft 3s ease 2.5s infinite reverse, showLights 1s ease 2.5s both; /* */
+    animation: partyLeft 3s ease 2.5s infinite reverse, showLights 1s ease 2.5s both; 
 }
 
 .light::before {
     content: "";
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     transition: 0.5s;
-    transform: rotate(-31deg);
+    transform: rotate(-4deg);
+    margin-left: 6px;
     pointer-events: none;
-    background-image: url('/Mussic_Kids/src/assets/img-stage-lamp.png');
-     /*background-image: url('src/assets/img-stage-lamp.png'); */
+    background-image: url('/Mussic_Kids/src/assets/img-lamp.png');
+     /*background-image: url('/src/assets/imp-lamp.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -107,7 +108,7 @@
     filter: blur(30px);
     height: 100%;
     width: 100%;
-    clip-path: polygon(45% 0, 59% 0, 100% 100%, 0 100%);
+    clip-path: polygon(47% 0, 56% 0, 100% 100%, 0 100%);
     transition: 0.5s;
     pointer-events: none;
 }

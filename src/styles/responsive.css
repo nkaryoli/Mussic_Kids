@@ -169,6 +169,10 @@
 
 @media screen and (max-width: 768px) {
 
+    .light.light--right-1, .light.light--left-1 {
+        top: 0px;
+    }
+
     .hero__content h1 {
         font-size: var(--h2-size);
         line-height: 1.3;
