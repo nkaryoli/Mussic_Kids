@@ -8,8 +8,8 @@
     height: 100dvh;
     gap: 50px;
     overflow: hidden;
-    /* background-image: url('/Mussic_Kids/src/assets/bg-piano.png'); */
-    background-image: url('/src/assets/bg-piano.png');
+    background-image: url('/Mussic_Kids/src/assets/bg-piano.png');
+    /* background-image: url('/src/assets/bg-piano.png'); */
     background-size: cover;
     background-position: bottom;
 }
