@@ -113,3 +113,24 @@
 .piano .piano__key:last-child {
     border-radius: 0 20px 20px 8px;
 }
+
+.btn-back {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+    background-color: var(--background-light);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--text-color);
+    font-size: var(--paragraf-size);
+    font-family: var(--font-family-tertiary);
+    padding: 5px 10px;
+    animation: none;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    gap: 10px;
+    cursor: pointer;
+    display: none;
+}

@@ -300,6 +300,11 @@
         font-family: var(--font-family-primary);
     }
 
+    
+    .btn-back {
+        display: flex;
+        top: 70px;
+    }
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
@@ -310,5 +315,9 @@
     .hero--bass, .hero--piano{
         padding: 5% 0;
         gap: 20px;
+    }
+
+    .btn-back {
+        display: flex;
     }
 }
