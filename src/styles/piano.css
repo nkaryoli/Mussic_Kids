@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:  7% 0 10% 0;
+    justify-content: center;
     height: 100dvh;
+    gap: 50px;
     overflow: hidden;
-    background-image: url('/Mussic_Kids/src/assets/bg-piano.png');
-    /* background-image: url('/src/assets/bg-piano.png'); */
+    /* background-image: url('/Mussic_Kids/src/assets/bg-piano.png'); */
+    background-image: url('/src/assets/bg-piano.png');
     background-size: cover;
     background-position: bottom;
 }
@@ -17,7 +18,6 @@
     color: var(--text-color);
     font-family: var(--font-family-secondary);
     font-size: var(--h1-size);
-    margin-bottom: 50px;
     animation:moveUp 1s ease both;
 }
 
