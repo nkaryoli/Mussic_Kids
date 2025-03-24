@@ -115,15 +115,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4% 7%;
-    gap: 5%;
-    overflow: hidden;
-}
-
 .hero__content {
     width: 100%;
     display: flex;
@@ -283,11 +274,7 @@ main a {
 
 @media (width<900px) {
 
-    .hero {
-        flex-direction: column;
-        padding-top: 10%;
-        gap: 0;
-    }
+
 
     .btn--play {
         font-size: var(--paragraf-size);
