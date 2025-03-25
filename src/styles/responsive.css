@@ -207,6 +207,18 @@
     .double-fretMark::after {
         top: 50px;
     }
+    
+    .item__content {
+        flex-direction: column;
+    }
+
+    .instructions__img {
+        margin: 7% auto;
+    }
+
+    table {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 768px) {
