@@ -181,6 +181,32 @@
     #mobile-play {
         display: none;
     }
+
+    /* === Bass Guitar Page === */
+    
+    .bassGuitar {
+        padding: 5px 0;
+    }
+    
+    .bassGuitar__fretboard {
+        height: 200px;
+    }
+
+    .string-notes__fret .key {
+        display: none;
+    }
+
+    .fretMark:after {
+        top: 100px;
+    }
+
+    .double-fretMark::before {
+        top: 150px;
+    }
+
+    .double-fretMark::after {
+        top: 50px;
+    }
 }
 
 @media screen and (max-width: 768px) {
