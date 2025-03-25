@@ -160,17 +160,12 @@
         gap: 50px;
     }
 
-    .instructions__img {
+    .instructions__img, .instructions__img-mouse {
         width: 60%;
     }
 
-    .instructions div {
-        width: 100%;
-    }
-
-    .instructions__title {
-        font-size: var(--h3-size);
-        margin-bottom: 50px;
+    .instructions__img-mouse  {
+        margin: 30px auto;
     }
 
     .piano--btn a {
