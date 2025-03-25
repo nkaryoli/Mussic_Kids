@@ -1,22 +1,111 @@
+/* ==================== NavBar ===================== */
+
+const navbar = document.getElementById('navbar');
+const openButton = document.getElementById('open-btn');
+
+const media = window.matchMedia('(max-width: 900px)');
+media.addEventListener('change', (e) => updateNavbar(e));
+
+function updateNavbar(e) {
+    const isMobile = e.matches;
+    console.log(isMobile);
+
+    if (isMobile) {
+        navbar.setAttribute('inert', '');
+    } else {
+        navbar.removeAttribute('inert');
+    }
+}
+
+function openMenu() {
+    navbar.classList.add('show');
+    openButton.setAttribute('aria-expanded', 'true');
+    navbar.removeAttribute('inert');
+}
+
+function closeMenu() {
+    navbar.classList.remove('show');
+    openButton.setAttribute('aria-expanded', 'false');
+    navbar.setAttribute('inert', '');
+}
+
+updateNavbar(media);
+
+/* ==================== Notes Background ===================== */
+
+const noteIconsBg = ['fa-music', 'fa-headphones', 'fa-guitar', 'fa-drum'];
+
+const notePositions = [];
+
+function generateRandomPosition() {
+    return {
+        x: Math.random() * 100,
+        y: Math.random() * 100
+    };
+}
+
+function checkCollision(newPos, size) {
+    return notePositions.some(pos => {
+        const distance = Math.sqrt(Math.pow(newPos.x - pos.x, 2) + Math.pow(newPos.y - pos.y, 2));
+        return distance < size * 3;
+    });
+}
+
+function createStaticMusicNotes(container, numNotes = 20) {
+    for (let i = 0; i < numNotes; i++) {
+        const note = document.createElement('span');
+        note.classList.add('static-note');
+
+        const randomIcon = noteIconsBg[Math.floor(Math.random() * noteIconsBg.length)];
+        note.innerHTML = `<i class="fa ${randomIcon}"></i>`;
+
+        const randomSize = 2 + Math.random() * 10;
+        note.style.fontSize = `${randomSize}rem`;
+
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FFD700'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        note.style.color = randomColor;
+
+        let newPos;
+        let attempts = 0;
+        do {
+            newPos = generateRandomPosition();
+            attempts++;
+            if (attempts > 50) break;
+        } while (checkCollision(newPos, randomSize));
+
+        note.style.left = `${newPos.x}%`;
+        note.style.top = `${newPos.y}%`;
+
+        container.appendChild(note);
+        notePositions.push(newPos);
+    }
+}
+
+const instrumentsNotesContainer = document.querySelector('.fixed-notes');
+createStaticMusicNotes(instrumentsNotesContainer, 15);
+
+/* ==================== Cursor Animation ===================== */
+
 let inactivityTimer, animationRunning = true;
 
-// Detectar si el dispositivo es móvil
 function isMobileDevice() {
     return window.innerWidth <= 834;
 }
 
-onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
+    updateNavbar(media);
     if (!isMobileDevice()) {
         document.addEventListener("mousemove", initializeBubbleAnimation, { once: true });
     }
-};
+});
 
 let animationStarted = false;
 let canvas, ctx, particles = [], spawnTimer = 0, spawnInterval = 10;
 let gravityStrength = 10;
 let time = 0;
 let mouse = { x: 0, y: 0, out: false };
-let spawnParticles = true; // Controla si se generan partículas
+let spawnParticles = true;
 
 function initializeBubbleAnimation(event) {
     if (!animationStarted) {
@@ -122,7 +211,7 @@ function updateBubblePositions(newTime) {
         }
     }
 
-    particles = particles.filter(p => p.a > 0.05); // Elimina partículas invisibles
+    particles = particles.filter(p => p.a > 0.05);
 
     for (let p of particles) {
         if (!mouse.out) {
@@ -139,7 +228,6 @@ function updateBubblePositions(newTime) {
     }
 }
 
-// Detener el loop si no hay partículas
 function stopLoop() {
     spawnParticles = false;
     setTimeout(() => {
@@ -149,7 +237,6 @@ function stopLoop() {
     }, 100);
 }
 
-// Reiniciar el loop si está detenido
 function restartLoop() {
     if (!animationRunning) {
         animationRunning = true;
@@ -157,15 +244,14 @@ function restartLoop() {
     }
 }
 
-// Manejo de inactividad
 function resetInactivityTimer() {
     clearTimeout(inactivityTimer);
     inactivityTimer = setTimeout(() => {
-        spawnParticles = false; // Detener la generación de partículas
+        spawnParticles = false;
         setTimeout(() => {
             if (particles.length === 0) {
-                stopLoop(); // Detener la animación cuando las partículas desaparezcan
+                stopLoop();
             }
         }, 1);
-    }, 5); // Reduzco el tiempo de inactividad a 300ms
+    }, 5);
 }
