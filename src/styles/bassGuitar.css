@@ -54,6 +54,10 @@
     animation: shakeString 0.1s ease-in-out infinite;
 }
 
+.shake {
+    animation: shakeString 0.3s ease-in-out;
+}
+
 .string {
     position: absolute;
     width: 100%;
@@ -65,19 +69,19 @@
     border: 2px solid #aaa; /* Borde metálico */
 }
 
-.string--g {
+.string-g {
     height: 3px;
 }
 
-.string--d {
+.string-d {
     height: 4.5px;
 }
 
-.string--a {
+.string-a {
     height: 6px;
 }
 
-.string--e {
+.string-e {
     height: 8px;
 }
 
