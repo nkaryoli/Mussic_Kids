@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (radio.checked && (radio.nextElementSibling.contains(event.target) || radio === event.target)) {
                 clickedInside = true;
             } else {
-                radio.checked = false; // Oculta el span al hacer clic fuera
+                radio.checked = false;
             }
         });
 

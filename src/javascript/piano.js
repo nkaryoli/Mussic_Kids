@@ -1,13 +1,10 @@
 const context = new AudioContext();
 
 function jsNota(frecuencia) {
-
     const o = context.createOscillator();
-
     const g = context.createGain();
 
     o.connect(g);
-
     o.type = "triangle";
     o.frequency.value = frecuencia;
     g.connect(context.destination);
@@ -52,8 +49,6 @@ document.addEventListener('keydown', function (event) {
 
     if (keyClass) {
         jsNota(getFrequency(event.key));
-
-        
         const keyElement = document.querySelector(`.${keyClass}`);
 
         if (keyElement) {
