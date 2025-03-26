@@ -133,21 +133,31 @@
         padding: 60px 40px 0 40px;
     }
 
-    .piano__key--white {
+    .piano__key--white-a, .piano__key--white-d, .piano__key--white-f, .piano__key--white-h,
+    .piano__key--white-j, .piano__key--white-k, .piano__key--white-z, .piano__key--white-x,
+    .piano__key--white-v, .piano__key--white-b, .piano__key--white-w7 {
         width: 45px;
     }
 
-    .piano__key--black {
+    .piano__key--white-s, .piano__key--white-g, .piano__key--white-l, .piano__key--white-c {
+        width: 42px;
+    }
+
+    .piano__key--white-f, .piano__key--white-s, .piano__key--white-g, .piano__key--white-j,
+    .piano__key--white-k, .piano__key--white-l, .piano__key--white-x, .piano__key--white-c,
+    .piano__key--white-b, .piano__key--white-w7 {
+        margin: 0 0 0 -14px;
+    }
+
+    .piano__key--black-1, .piano__key--black-2, .piano__key--black-3, .piano__key--black-4,
+    .piano__key--black-5, .piano__key--black-6, .piano__key--black-7, .piano__key--black-8,
+    .piano__key--black-9, .piano__key--black-0 {
         height: 130px;
-        width: 28px;
+        width: 33px;
     }
 
-    .piano__key--black:active {
-        height: 131px;
-    }
-
-    .a, .g, .f, .d, .c {
-        margin: 0 0 0 -11px;
+    .piano .piano__key:last-child {
+        width: 45px;
     }
 
     .instrument--guide {

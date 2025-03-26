@@ -42,7 +42,7 @@
     position: relative;
 }
 
-.piano__key::before{
+/* .piano__key::before{
     content: attr(data-key);
     color: var(--text-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -63,7 +63,7 @@
     width: 80%;
     padding: 8px 0;
     pointer-events: none;
-}
+} */
 
 .piano__key--white-a, .piano__key--white-s, .piano__key--white-d, .piano__key--white-f,
 .piano__key--white-g, .piano__key--white-g, .piano__key--white-h, .piano__key--white-j,
