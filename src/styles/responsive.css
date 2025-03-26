@@ -197,7 +197,7 @@
         height: 200px;
     }
 
-    .string-notes__fret .key {
+    .string-notes__fret .key, .key-tag {
         display: none;
     }
 

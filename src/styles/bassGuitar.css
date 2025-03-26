@@ -119,11 +119,11 @@
     backdrop-filter: blur(5px);
 }
 
-.key--upper {
+.key--upper, .key-tag--white {
     background-image: radial-gradient(circle, #ffffff, #a61eb5b0);
 }
 
-.key--lower{
+.key--lower, .key-tag--black{
         background-image: radial-gradient(circle, #ffffff, #67bb13b0);
 }
 
