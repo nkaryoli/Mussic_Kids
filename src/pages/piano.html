@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piano - Mussic kids</title>
-    <!--<link rel="stylesheet" href="/Mussic_Kids/src/styles/styles.css">-->
-    <link rel="stylesheet" href="/src/styles/styles.css">
+    <link rel="stylesheet" href="/Mussic_Kids/src/styles/styles.css">
+    <!--<link rel="stylesheet" href="/src/styles/styles.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preload" as="image" href="/Mussic_Kids/src/assets/bg-piano.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -184,26 +184,91 @@
         </div>
 
     </main>
-    
-    <section class="instrument--guide">
+    <section class="instrument-guide">
+        <h1 class="instructions__title text--gradient-rainbow">How to Play 🎶</h1>
         <div class="instructions">
-            <img class="instructions__img" src="../assets/img-piano-instruction.jpg" alt="image Piano instructions">
-            <div>
-                <h1 class="instructions__title text--gradient-simple">How to play</h1>
-                <ul class="instructions__list">
-                    <li class="instructions__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-                    <li class="instructions__description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li class="instructions__description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                    <li class="instructions__description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-                    <li class="instructions__description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-                </ul>
+            <div class="instructions__keyboard">
+                <h2 class="instructions__subtitle">With the Keyboard</h2>
+                <ol class="instructions__list">
+                    <li class="instructions__item">Piano Layout on the Keyboard
+                        <ul class="instructions__nested-list">
+                            <li>Each row of the keyboard represents a string on the piano.</li>
+                            <li>The keys are organized so you have an inmersive experience:
+                                <ul class="sub-list">
+                                    <li class="string-label">Black piano keys → Top row of keys (numeric keys and 'q', 'w', 'e', 'r', 't', 'y').</li>
+                                    <li class="string-label">White piano keys → Second and third rows of keys (from 'a' to 'm' and ',', '.', '-', 'u', 'i', 'o', 'p').</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="instructions__item">
+                        How to Play a Note
+                        <ul class="instructions__nested-list">
+                            <li>Press the corresponding key on your keyboard.</li>
+                            <li>There will be an immediate response, and the assigned note will play.</li>
+                        </ul>
+                    </li>
+                    <li class="instructions__item">Key Mapping
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Piano Key</th>
+                                    <th>Keyboard Keys</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Black</strong></td>
+                                    <td>1 2 3 4 5 6 7 8 9 0 q w e r t y</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>White</strong></td>
+                                    <td>a s d f g h j k l z x c v b n m , . - u i o p</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="instructions__item">Playing Tips
+                        <ul class="instructions__nested-list">
+                            <li>Try different key combinations to play chords.</li>
+                            <li>Experiment with rhythms: Try playing in different time signatures for a more dynamic performance.</li>
+                            <li>Experiment with melodies by playing sequences of notes..</li>
+                            <li>Play along with songs or improvise your own music!</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="instructions__mouse">
+                <h2 class="instructions__subtitle">With the Mouse</h2>
+                <ol class="instructions__list">
+                    <li class="instructions__item">Click to Play Notes
+                        <div class="item__content">
+                            <ul class="instructions__nested-list">
+                                <li>Click on any piano key to play it.</li>
+                                <li>There will be an immediate response, and the assigned note will play.</li>
+                                <li>You can click multiple keys in succession to play a melody.</li>
+                            </ul>
+                            <img class="instructions__img-mouse" src="../assets/img-mouse.png" alt="keyboard instructions">
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="instructions__combo">
+                <h2 class="instructions__subtitle">Using Both Keyboard and Mouse</h2>
+                <ol class="instructions__list">
+                    <li class="instructions__item">Combine Inputs
+                        <ul class="instructions__nested-list">
+                            <li>You can combine both methods: play some notes using the keyboard and others with the mouse.</li>
+                            <li>Press a key and click at the same time to create harmonics.</li>
+                            <li>This allows for faster playing and more creative musical expression.</li>
+                        </ul>
+                    </li>
+                </ol>
             </div>
         </div>
-        <div class="btn--back-to-instruments">
-            <a href="./instruments.html"><i class="fa-solid fa-arrow-left"></i>Try more instruments</a>
-        </div>
+        <a href="./instruments.html" class="btn--back-to-instruments"><i class="fa-solid fa-arrow-left"></i><i class="fa-solid fa-music"></i>Try more instruments <i class="fa-solid fa-music"></i></a>
     </section>
-
     <footer>
         <p class="footer__text">Developed by Karyoli Nieves</p> 
         <div class="footer__contact">
@@ -220,12 +285,12 @@
     </footer>
     <canvas></canvas>
     
-    <!--<script src="/Mussic_Kids/src/javascript/global.js"></script>
+    <script src="/Mussic_Kids/src/javascript/global.js"></script>
     <script src="/Mussic_Kids/src/javascript/piano.js"></script>
-    <script src="/Mussic_Kids/src/javascript/backBtn.js"></script>-->
-    <script src="/src/javascript/global.js"></script>
+    <script src="/Mussic_Kids/src/javascript/backBtn.js"></script>
+    <!--<script src="/src/javascript/global.js"></script>
     <script src="/src/javascript/piano.js"></script>
-    <script src="/src/javascript/backBtn.js"></script>
+    <script src="/src/javascript/backBtn.js"></script>-->
 </body>
 
 </html>
