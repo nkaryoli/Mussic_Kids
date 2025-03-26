@@ -1,6 +1,6 @@
 /* =========================== Resppnsive Design ============================ */
 
-@media (width<920px) {
+@media (max-width: 920px) {
 
     /* === Header === */
 
@@ -83,8 +83,9 @@
     }
 
     .btn--play {
-        font-size: var(--paragraf-size);
-        padding: 10px 15px;
+        font-size: var(--paragraf-size) !important;
+        padding: 10px 15px !important;
+        scale: 0.9;
     }
 
     /* === instruments page === */
