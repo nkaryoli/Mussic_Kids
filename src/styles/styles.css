@@ -29,7 +29,6 @@
     --paragraf-size: 1.2rem;
 }
 
-
 /* =============== Canvas mouse effect ================= */
 canvas {
     top: 0;
@@ -43,7 +42,6 @@ canvas {
 /* ===================================================== */
 
 /* ========== Background static notes ================= */
-
 .fixed-notes {
     position: fixed;
     width: 100%;
@@ -61,7 +59,6 @@ canvas {
 /* ===================================================== */
 
 /* ========== Background Animated notes ================= */
-
 .background-notes {
     position: fixed;
     top: 0;
@@ -343,10 +340,9 @@ strong {
 
 @media (width<900px) {
 
-
-
     .btn--play {
         font-size: var(--paragraf-size);
         padding: 10px 15px;
     }
+    
 }

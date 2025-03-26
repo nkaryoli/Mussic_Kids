@@ -1,9 +1,4 @@
-/* ********************* HOME ****************************** */
-
 /* ===================== Hero Section ===================== */
-
-/* Hero lights animation */
-
 
 .hero--home {
     height: 100dvh;
@@ -128,7 +123,6 @@
     max-width: 800px;
     animation: moveUp 0.6s ease-out 0.5s both;
 }
-
 
 /*=*/
 

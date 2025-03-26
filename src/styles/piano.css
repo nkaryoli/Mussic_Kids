@@ -1,4 +1,4 @@
-/* =============== Hero Piano================== */
+/* =============== Hero Piano ================== */
 
 .hero--piano {
     display: flex;
@@ -9,7 +9,6 @@
     gap: 50px;
     overflow: hidden;
     background-image: url('/Mussic_Kids/src/assets/bg-piano.png');
-    /* background-image: url('/src/assets/bg-piano.png'); */
     background-size: cover;
     background-position: bottom;
 }
@@ -41,29 +40,6 @@
     text-align: center;
     position: relative;
 }
-
-/* .piano__key::before{
-    content: attr(data-key);
-    color: var(--text-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: -50px;
-    left: 0;
-    background-image: radial-gradient(
-        circle at center,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.2),
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.6),
-        rgba(255, 255, 255, 0.8)
-    );
-    background-color: var(--background-light);
-    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.3) inset, 0 0 3px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    width: 80%;
-    padding: 8px 0;
-    pointer-events: none;
-} */
 
 .piano__key--white-a, .piano__key--white-s, .piano__key--white-d, .piano__key--white-f,
 .piano__key--white-g, .piano__key--white-g, .piano__key--white-h, .piano__key--white-j,
