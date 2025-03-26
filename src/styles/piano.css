@@ -65,7 +65,13 @@
     pointer-events: none;
 }
 
-.piano__key--white {
+.piano__key--white-a, .piano__key--white-s, .piano__key--white-d, .piano__key--white-f,
+.piano__key--white-g, .piano__key--white-g, .piano__key--white-h, .piano__key--white-j,
+.piano__key--white-k, .piano__key--white-l, .piano__key--white-z, .piano__key--white-x,
+.piano__key--white-c, .piano__key--white-v, .piano__key--white-b, .piano__key--white-n,
+.piano__key--white-m, .piano__key--white-w1, .piano__key--white-w2,.piano__key--white-w3,
+.piano__key--white-w4, .piano__key--white-w5, .piano__key--white-w6, .piano__key--white-w7
+{
     height: 100%;
     width: 55px;
     border-left: 1px solid #bbb;
@@ -76,7 +82,14 @@
     background-color: white;
 }
 
-.piano__key--white:active {
+.piano__key--white-f, .piano__key--white-s, .piano__key--white-g, .piano__key--white-j,
+.piano__key--white-k, .piano__key--white-l, .piano__key--white-x, .piano__key--white-c, 
+.piano__key--white-b, .piano__key--white-n, .piano__key--white-m, .piano__key--white-w2, 
+.piano__key--white-w3, .piano__key--white-w5, .piano__key--white-w6, .piano__key--white-w7 {
+    margin: 0 0 0 -17px;
+}
+
+.press-white {
     height: 101%;
     border-top: 1px solid #777;
     border-left: 1px solid #999;
@@ -85,7 +98,10 @@
     background: linear-gradient(top, #fff 0%, #e9e9e9 100%);
 }
 
-.piano__key--black {
+.piano__key--black-1, .piano__key--black-2, .piano__key--black-3, .piano__key--black-4, .piano__key--black-5,
+.piano__key--black-6, .piano__key--black-7, .piano__key--black-8, .piano__key--black-9, .piano__key--black-0,
+.piano__key--black-q, .piano__key--black-w, .piano__key--black-e, .piano__key--black-r, .piano__key--black-t, 
+.piano__key--black-y {
     height: 180px;
     width: 35px;
     margin: 0 0 0 -1em;
@@ -96,14 +112,10 @@
     background: linear-gradient(45deg, #222 0%, #555 100%);
 }
 
-.piano__key--black:active {
-    height: 181px;
+.press-black {
+    height: 185px;
     box-shadow: -1px -1px 2px rgba(255, 255, 255, 0) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.4) inset, 0 1px 2px rgba(0, 0, 0, 0.3);
     background: linear-gradient(left, #444 0%, #222 100%);
-}
-
-.a, .g, .f, .d, .c {
-    margin: 0 0 0 -17px;
 }
 
 .piano .piano__key:first-child {

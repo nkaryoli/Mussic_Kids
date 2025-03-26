@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piano - Mussic kids</title>
-    <link rel="stylesheet" href="/Mussic_Kids/src/styles/styles.css">
-    <!--<link rel="stylesheet" href="/src/styles/styles.css">-->
+    <!--<link rel="stylesheet" href="/Mussic_Kids/src/styles/styles.css">-->
+    <link rel="stylesheet" href="/src/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preload" as="image" href="/Mussic_Kids/src/assets/bg-piano.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,61 +41,67 @@
         <button class="btn-back"><i class="fa-solid fa-arrow-left"></i>go back</button>
         <div class="piano">
             <ul class="piano__set">
-                <!-- firt octave -->
-                <li onclick=" jsNota(261.625)" class="piano__key piano__key--white e" data-key="DO"></li>
-                <li onclick=" jsNota(311.127)" class="piano__key piano__key--black ds"></li>
-                <li onclick=" jsNota(293.665)" class="piano__key piano__key--white d" data-key="RE"></li> <!---->
-                <li onclick=" jsNota(277.183)" class="piano__key piano__key--black cs"></li>
-                <li onclick=" jsNota(261.626)" class="piano__key piano__key--white c" data-key="MI"></li> <!---->
-                <li onclick=" jsNota(246.942)" class="piano__key piano__key--white b" data-key="FA"></li>
-                <li onclick=" jsNota(233.082)" class="piano__key piano__key--black as"></li>
-                <li onclick=" jsNota(220.000)" class="piano__key piano__key--white a" data-key="SOL"></li> <!---->
-                <li onclick=" jsNota(207.652)" class="piano__key piano__key--black gs"></li>
-                <li onclick=" jsNota(195.995)" class="piano__key piano__key--white g" data-key="LA"></li> <!---->
-                <li onclick=" jsNota(184.997)" class="piano__key piano__key--black fs"></li>
-                <li onclick=" jsNota(174.614)" class="piano__key piano__key--white f" data-key="SI"></li> <!---->
+                <li onclick="handlePianoClick(this, 275.000)" class="piano__key piano__key--white-a" data-key="LA"></li>
+                <li onclick="handlePianoClick(this, 291.353)" class="piano__key piano__key--black-1" data-key="black"></li>
+                
+                <li onclick="handlePianoClick(this, 308.677)" class="piano__key piano__key--white-s" data-key="SI"></li>
 
-                <!-- second octave -->
-                <li onclick=" jsNota(329.628)" class="piano__key piano__key--white e" data-key="DO" id="mobile-play"></li>
-                <li onclick=" jsNota(311.127)" class="piano__key piano__key--black ds" id="mobile-play"></li>
-                <li onclick=" jsNota(293.665)" class="piano__key piano__key--white d" data-key="RE" id="mobile-play"></li> <!---->
-                <li onclick=" jsNota(277.183)" class="piano__key piano__key--black cs" id="mobile-play"></li>
-                <li onclick=" jsNota(261.626)" class="piano__key piano__key--white c" data-key="MI" id="mobile-play"></li> <!---->
-                <li onclick=" jsNota(246.942)" class="piano__key piano__key--white b" data-key="FA" id="mobile-play"></li>
-                <li onclick=" jsNota(233.082)" class="piano__key piano__key--black as" id="mobile-play"></li>
-                <li onclick=" jsNota(220.000)" class="piano__key piano__key--white a" data-key="SOL" id="mobile-play"></li> <!---->
-                <li onclick=" jsNota(207.652)" class="piano__key piano__key--black gs" id="mobile-play"></li>
-                <li onclick=" jsNota(195.995)" class="piano__key piano__key--white g" data-key="LA" id="mobile-play"></li>
-                <li onclick=" jsNota(184.997)" class="piano__key piano__key--black fs" id="mobile-play"></li>
-                <li onclick=" jsNota(174.614)" class="piano__key piano__key--white f" data-key="SI" id="mobile-play"></li> <!---->
+                <li onclick="handlePianoClick(this, 327.032)" class="piano__key piano__key--white-d" data-key="DO"></li>
+                <li onclick="handlePianoClick(this, 346.479)" class="piano__key piano__key--black-2" data-key="black"></li>
 
-                <!-- third octave -->
-                <li onclick=" jsNota(329.628)" class="piano__key piano__key--white e" data-key="DO" id="mobile-play"></li>
-                <li onclick=" jsNota(311.127)" class="piano__key piano__key--black ds" id="mobile-play"></li>
-                <li onclick=" jsNota(293.665)" class="piano__key piano__key--white d" data-key="RE" id="mobile-play"></li> <!---->
-                <li onclick=" jsNota(277.183)" class="piano__key piano__key--black cs" id="mobile-play"></li>
-                <li onclick=" jsNota(261.626)" class="piano__key piano__key--white c" data-key="MI" id="mobile-play"></li> <!---->
-                <li onclick=" jsNota(246.942)" class="piano__key piano__key--white b" data-key="FA" id="mobile-play"></li>
-                <li onclick=" jsNota(233.082)" class="piano__key piano__key--black as" id="mobile-play"></li>
-                <li onclick=" jsNota(220.000)" class="piano__key piano__key--white a" data-key="SOL" id="mobile-play"></li> <!---->
-                <li onclick=" jsNota(207.652)" class="piano__key piano__key--black gs" id="mobile-play"></li>
-                <li onclick=" jsNota(195.995)" class="piano__key piano__key--white g" data-key="LA" id="mobile-play"></li> <!---->
-                <li onclick=" jsNota(184.997)" class="piano__key piano__key--black fs" id="mobile-play"></li>
-                <li onclick=" jsNota(174.614)" class="piano__key piano__key--white f" data-key="SI" id="mobile-play"></li> <!---->
+                <li onclick="handlePianoClick(this, 367.081)" class="piano__key piano__key--white-f" data-key="RE"></li>
+                <li onclick="handlePianoClick(this, 388.909)" class="piano__key piano__key--black-3" data-key="black"></li>
 
-                <!-- fourth octave -->
-                <li onclick=" jsNota(329.628)" class="piano__key piano__key--white e" data-key="DO"></li>
-                <li onclick=" jsNota(311.127)" class="piano__key piano__key--black ds"></li>
-                <li onclick=" jsNota(293.665)" class="piano__key piano__key--white d" data-key="RE"></li> <!---->
-                <li onclick=" jsNota(277.183)" class="piano__key piano__key--black cs"></li>
-                <li onclick=" jsNota(261.626)" class="piano__key piano__key--white c" data-key="MI"></li> <!---->
-                <li onclick=" jsNota(246.942)" class="piano__key piano__key--white b" data-key="FA"></li>
-                <li onclick=" jsNota(233.082)" class="piano__key piano__key--black as"></li>
-                <li onclick=" jsNota(220.000)" class="piano__key piano__key--white a" data-key="SOL"></li> <!---->
-                <li onclick=" jsNota(207.652)" class="piano__key piano__key--black gs"></li>
-                <li onclick=" jsNota(195.995)" class="piano__key piano__key--white g" data-key="LA"></li> <!---->
-                <li onclick=" jsNota(184.997)" class="piano__key piano__key--black fs"></li>
-                <li onclick=" jsNota(174.614)" class="piano__key piano__key--white f" data-key="SI"></li> <!---->
+                <li onclick="handlePianoClick(this, 412.035)" class="piano__key piano__key--white-g" data-key="MI"></li>
+                
+                <li onclick="handlePianoClick(this, 436.536)" class="piano__key piano__key--white-h" data-key="FA"></li>
+                <li onclick="handlePianoClick(this, 462.493)" class="piano__key piano__key--black-4" data-key="black"></li>
+                
+                <li onclick="handlePianoClick(this, 489.995)" class="piano__key piano__key--white-j" data-key="SOL"></li>
+                <li onclick="handlePianoClick(this, 519.130)" class="piano__key piano__key--black-5" data-key="black"></li>
+
+                <li onclick="handlePianoClick(this, 550.000)" class="piano__key piano__key--white-k" data-key="LA"></li>
+                <li onclick="handlePianoClick(this, 582.705)" class="piano__key piano__key--black-5" data-key="black"></li>
+                
+                <li onclick="handlePianoClick(this, 617.354)" class="piano__key piano__key--white-l" data-key="SI"></li>
+
+                <li onclick="handlePianoClick(this, 654.064)" class="piano__key piano__key--white-z" data-key="DO"></li>
+                <li onclick="handlePianoClick(this, 692.957)" class="piano__key piano__key--black-7" data-key="black"></li>
+                
+                <li onclick="handlePianoClick(this, 734.162)" class="piano__key piano__key--white-x" data-key="RE"></li>
+                <li onclick="handlePianoClick(this, 777.817)" class="piano__key piano__key--black-8" data-key="black"></li>
+                
+                <li onclick="handlePianoClick(this, 824.069)" class="piano__key piano__key--white-c" data-key="MI" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 873.071)" class="piano__key piano__key--white-v" data-key="FA" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 924.986)" class="piano__key piano__key--black-9" data-key="black" id="mobile-play"></li>
+
+                <li onclick="handlePianoClick(this, 979.989)" class="piano__key piano__key--white-b" data-key="SOL" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 103.826)" class="piano__key piano__key--black-0" data-key="black" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 110.000)" class="piano__key piano__key--white-n" data-key="LA" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 116.547)" class="piano__key piano__key--black-q" data-key="black" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 123.471)" class="piano__key piano__key--white-m" data-key="SI" id="mobile-play"></li>
+
+                <li onclick="handlePianoClick(this, 130.813)" class="piano__key piano__key--white-w1" data-key="DO" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 138.591)" class="piano__key piano__key--black-w" data-key="black" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 146.832)" class="piano__key piano__key--white-w2" data-key="RE" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 155.997)" class="piano__key piano__key--black-e" data-key="black" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 164.814)" class="piano__key piano__key--white-w3" data-key="black" data-key="MI" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 174.614)" class="piano__key piano__key--white-w4" data-key="FA" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 184.997)" class="piano__key piano__key--black-r" data-key="black" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 195.998)" class="piano__key piano__key--white-w5" data-key="SOL" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 207.652)" class="piano__key piano__key--black-t" data-key="black" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 220.000)" class="piano__key piano__key--white-w6" data-key="LA" id="mobile-play"></li>
+                <li onclick="handlePianoClick(this, 223.082)" class="piano__key piano__key--black-y" data-key="black" id="mobile-play"></li>
+                
+                <li onclick="handlePianoClick(this, 246.942)" class="piano__key piano__key--white-w7" data-key="black" data-key="SI"></li>
             </ul>
         </div>
 
@@ -136,12 +142,12 @@
     </footer>
     <canvas></canvas>
     
-    <script src="/Mussic_Kids/src/javascript/global.js"></script>
+    <!--<script src="/Mussic_Kids/src/javascript/global.js"></script>
     <script src="/Mussic_Kids/src/javascript/piano.js"></script>
-    <script src="/Mussic_Kids/src/javascript/backBtn.js"></script>
-    <!--<script src="/src/javascript/global.js"></script>
+    <script src="/Mussic_Kids/src/javascript/backBtn.js"></script>-->
+    <script src="/src/javascript/global.js"></script>
     <script src="/src/javascript/piano.js"></script>
-    <script src="/src/javascript/backBtn.js"></script>-->
+    <script src="/src/javascript/backBtn.js"></script>
 </body>
 
 </html>
