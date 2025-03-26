@@ -1,6 +1,6 @@
 # Mussic Kids
 
-![home page example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/img-web-example.png)
+![home page example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-responsive.png)
 
 Mussic Kids is an interactive web application designed for an online music school. It allows users to practice musical instruments virtually, playing sounds through mouse clicks or keyboard presses. The platform provides an engaging and educational experience, making music learning more accessible and interactive.
 
@@ -31,6 +31,8 @@ This project is inspired by a web development exercise I completed during my ful
 ![piano example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-piano.png)
 
 ![bass guitar example](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-bass-guitar.png)
+
+![bass guitar instructions](https://raw.githubusercontent.com/nkaryoli/Mussic_Kids/dev/src/assets/demo-instructions.png)
 
 ## Click [ 🌐 here](https://nkaryoli.github.io/Mussic_Kids/) to see the app. 
 
