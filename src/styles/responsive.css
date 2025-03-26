@@ -2,6 +2,59 @@
 
 @media (width<920px) {
 
+    /* === Header === */
+
+    #open-btn, #close-btn {
+        display: block;
+    }
+
+    #close-btn {
+        padding: 20px;
+        font-size: var(--h5-size);
+    }
+
+    nav{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        height: 100dvh;
+        flex-direction: column;
+        justify-content: start;
+        width: min(15em, 100%);
+        background: rgb(12, 12, 12);
+        transition: right 0.3s ease-out;
+        z-index: 10;
+    }
+
+    .logo img {
+        padding: 20px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: start;
+    }
+
+    nav ul li a.active-link {
+        background-color: #2929294a;
+        border-bottom: none;
+        border-left: 3px solid var(--accent-color);
+    }
+
+    nav.show {
+        right: 0;
+    }
+
+    nav.show ~ #overlay {
+        display: block;
+    }
+
     /* === Home page === */
     
     .hero--home {
@@ -11,9 +64,27 @@
         gap: 0;
     }
 
+    .light {
+        height: 105vh;
+    }
+
     .hero__content {
         height: auto;
         padding: 7% 0;
+    }
+    
+    .hero__content h1 {
+        font-size: var(--h2-size);
+        margin-top: 0px;
+    }
+
+    .hero__content p {
+        font-size: var(--paragraf-size);
+    }
+
+    .btn--play {
+        font-size: var(--paragraf-size);
+        padding: 10px 15px;
     }
 
     /* === instruments page === */
@@ -243,15 +314,6 @@
         top: 0px;
     }
 
-    .hero__content h1 {
-        font-size: var(--h2-size);
-        line-height: 1.3;
-    }
-
-    .hero__content p {
-        font-size: var(--paragraf-size);
-    }
-
     .hero__content a {
         font-size: var(--h5-size);
     }
@@ -359,9 +421,11 @@
         display: flex;
         top: 100px;
     }
+
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
+
     .header--instrument {
         display: none;
     }
@@ -374,4 +438,21 @@
     .btn-back {
         display: flex;
     }
+
+}
+
+@media (max-width:460px) {
+
+    .logo img {
+        width: 200px;
+    }
+
+    footer a, .footer--navigation {
+        padding-inline: 5px;
+    }
+    
+    .footer__navigation a {
+        font-size: 1.2rem;
+    }
+
 }

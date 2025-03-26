@@ -53,13 +53,3 @@ footer a, .footer--navigation {
     color: var(--text-color);
     margin-left: 10px;
 }
-
-@media (max-width: 430px) {
-    footer a, .footer--navigation {
-        padding-inline: 5px;
-    }
-    
-    .footer__navigation a {
-        font-size: 1.2rem;
-    }
-}
